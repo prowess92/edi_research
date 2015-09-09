@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Sellies ePOS</title>
+<%= stylesheet_link_tag 'default.css', :media => 'all' %>
+<%= stylesheet_link_tag 'perfect-scrollbar.css' %>
+<%= javascript_include_tag 'jquery.min.js' %>
+<%= javascript_include_tag 'jquery.js' %>
+<%= javascript_include_tag 'perfect-scrollbar.js' %>
+  <%= csrf_meta_tag %>
+</head>
+<style>
+
+@media print {
+body{background:#fff;}
+#info{background:#fff;}
+.report{
+	width:1000;
+	position:relative;
+        top:10;
+	height:650;
+	background:#fff;
+ 	padding-left:10px;
+        overflow:visible;
+        font:11px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+
+.report table{width:100%;}
+.report table td #head{
+	margin:0;
+	padding:0;
+	font-weight:strong;
+	color:#adafb1;
+	text-align:center;
+	display:inline-block;
+	font:19px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;	
+	}
+#yellow{visibility:hidden;}
+#info table #blank{
+	background: #fff;
+      }
+}
+</style> 
+<body>
+
+
+<div id="content">
+<%= yield %>
+</div>
+<div id='yellow'><%= link_to "finish", :controller => 'report', :action => 'index'  %></div>
+</body>
+</html>

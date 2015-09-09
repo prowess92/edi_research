@@ -1,0 +1,39 @@
+#main_menu{}
+#main_menu h2{
+	position:relative;
+	margin:0;
+	padding:0;
+	/*padding:5px 40px 0 0;*/
+	top:20;
+	text-align:left;
+	display:inline-block;
+	font: 30px/30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	color:#3a7fba;
+    	margin:0;
+	text-shadow: 3px 4px 1px #cfc9d0;	
+	}
+#main_menu h3{
+	position:relative;
+	margin:0;
+	top:27;
+	padding:2 2 2 10;
+	text-align:left;
+	display:block;
+	font: 20px/20px Georgia, 'Times New Roman', Times, serif, Franklin Gothic Book;
+	font-weight:bold;
+	color:#6e7a84;	
+	}	
+#main_menu span{
+	margin:0;
+	padding:0;
+	text-align:left;
+	display:inline-block;
+	font: 70px/24px "Comic Sans MS", cursive;
+	color:#3a7fba;
+	text-shadow: 3px 4px 1px #cfc9d0;	
+	}
+p{
+  font: 22px/22px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color:#77606d;
+ }

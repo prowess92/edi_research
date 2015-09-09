@@ -1,0 +1,23 @@
+<style>
+#left-panel p{width:97%}
+</style>
+<span id="notice"><%= notice %></span>
+
+<p>
+  <b>ARV Number:</b>
+  <% client = Client.find(@appointment.client_id) %>
+  <%= client.arv_number %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @appointment.due_date %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @appointment.created_by %>
+</p>
+
+
+

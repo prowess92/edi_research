@@ -1,0 +1,5 @@
+<h3>New client</h3>
+
+<%= render 'form' %>
+
+

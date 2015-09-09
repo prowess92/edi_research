@@ -1,0 +1,298 @@
+<!DOCTYPE html">
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>~</title>
+<%= stylesheet_link_tag 'default.css', :media => 'all' %>
+<%= stylesheet_link_tag 'dashboard.css', :media => 'all' %>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+</head>
+<style>
+/*#right-panel a{color:#145b80;}*/
+#main_content{overflow:hidden;height:500px;}
+#left-panel{position:relative;display:inline-block;width:780;}
+#logo{
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:100px;
+	top:-23px;
+    }
+#logo img{width:100;height:100;}
+#header_name{
+	top:0px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:235px;
+	width:700px;
+	}
+#main_menu{top:108}
+#main_body{top:15}
+#main_footer{
+	top:20;
+	margin:0 auto;
+	width:1024;
+	height:20;
+	overflow:hidden;
+	}
+#main_header{top:30;}
+#top-header{top:55;z-index:500;}
+#index_cars_list{
+	z-index:600;
+	top:50;
+	padding-left:10;
+	position:absolute;
+        display:block;
+        width:980;
+	height:400;
+	border:1px dotted #000;
+	background:#fff;
+	border-radius:10px;
+	overflow:auto;
+	}
+#staff_left{
+	padding:0;
+	z-index:600;
+	top:50;
+	padding-left:10;
+	position:absolute;
+        display:block;
+        width:450;
+	height:424;
+	border:1px dotted #000;
+	background:#f2f1f0;
+	border-radius:10px;
+	overflow:hidden;
+	}
+#staff_right{
+	z-index:600;
+	top:50;
+	left:500;
+	padding:10;
+	position:absolute;
+        display:block;
+        width:480;
+	height:405;
+	border:1px dotted #000;
+	background:#fff;
+	border-radius:10px;
+	overflow:auto;
+	}
+#staff_right #box{
+	margin-top:20;
+	padding:5;
+	background: #F9F8FE;
+	border:1px dotted #0F0941;
+	display:block;
+	width:97%;
+	font:17px/1 “helvetica neue”, helvetica, arial, sans-serif;
+	}
+#staff_left #box{
+	margin-top:20;
+	padding:5;
+	background: #F9F8FE;
+	border:1px dotted #0F0941;
+	display:block;
+	width:97%;
+	font:17px/1 “helvetica neue”, helvetica, arial, sans-serif;
+	}
+#car_close a{
+	position:absolute;
+	top:370;
+	left:880;
+	display:block;
+	background-color: #fff;
+	border: 1px solid #3f4fd2;
+	border-radius: 5px;
+	padding: 3px 35px 3px 35px;
+    	text-decoration: none;
+    	color: #3f4fd2;
+    	font:13px Comic Sans MS, "cursive";
+    	text-align: center;
+	}
+#car_close a:active{border: 2px solid #3f4fd2;}
+#booking_close{
+	position:absolute;
+	top:440;
+	left:340;
+	z-index:700;
+	}
+#booking_close a{
+	position:relative;
+	display:block;
+	background-color: #fff;
+	border: 1px solid #3f4fd2;
+	border-radius: 5px;
+	padding: 3px 35px 3px 35px;
+    	text-decoration: none;
+    	color: #3f4fd2;
+    	font:13px Comic Sans MS, "cursive";
+    	text-align: center;
+	}
+#booking_close a:active{border: 2px solid #3f4fd2;}
+#noti_close{
+	position:absolute;
+	top:440;
+	left:870;
+	z-index:700;
+	}
+#noti_close a{
+	position:relative;
+	display:block;
+	background-color: #fff;
+	border: 1px solid #3f4fd2;
+	border-radius: 5px;
+	padding: 3px 35px 3px 35px;
+    	text-decoration: none;
+    	color: #3f4fd2;
+    	font:13px Comic Sans MS, "cursive";
+    	text-align: center;
+	}
+#noti_close a:active{border: 2px solid #3f4fd2;}
+#notifier ol{
+	position:relative;
+	display:block;
+	height:auto;
+	width:100%;
+	counter-reset: li;
+	list-style: none;
+	*list-style: decimal;
+
+	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin-bottom: 4em;
+	}
+#notifier ol ol{
+	margin: 0 0 0 2em;
+	}
+#notifier ol li{
+	display:block;
+	height:20;
+	margin-top:20;
+	}
+#staff_left ol{
+	position:relative;
+	display:block;
+	height:auto;
+	width:100%;
+	counter-reset: li;
+	list-style: none;
+	*list-style: decimal;
+	font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin-bottom: 4em;
+	}
+#staff_left ol ol{
+	margin: 0 0 0 2em;
+	}
+#staff_left ol li{
+	display:block;
+	height:20;
+	margin-top:20;
+	}
+.list-deco a{
+	width:375;
+	position: relative;
+	height:20;
+	display: block;
+	padding: .4em .4em .4em .8em;
+	*padding: .4em;
+	margin: .5em 0 .5em 2.5em;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;
+	transition: all .3s ease-out;		
+	}
+.list-deco a:hover{
+	background: #eee;
+	}
+.list-deco a:before{
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -2.5em;
+	top: 50%;
+	margin-top: -1em;
+	background: #87ceeb;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	text-align: center;
+	font-weight: bold;
+	}
+.list-deco a:after{
+	position: absolute;
+	content: '';
+	border: .5em solid transparent;
+	left: -1em;
+	top: 50%;
+	margin-top: -.5em;
+	transition: all .3s ease-out;
+	}
+.list-deco a:hover:after{
+	left: -.5em;
+	border-left-color: #87ceeb;
+	}
+</style>
+<body>
+
+<div id="main_menu">
+<div class="cssMenu" style="visibility:hidden;">
+<ul>
+    <li id="plus">&nbsp;</li>		 
+    <li id="plus" style="border-radius:0;width:610;border:none;margin-left:-5;">&nbsp;</li>	
+    <li id="minus" style="width:258px;margin-left:-5;">&nbsp;</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="main_header">
+<div id="top-header">
+<span>
+<% if logged_in? %>
+    <%= link_to "logout", :controller => "sessions",
+                          :action     => "destroy" %>
+<% end %>
+</span>
+</div>
+<div id="logo">
+	  
+	  </div>
+<div id="header_name"><span>EDI REASEARCH</span>
+</div>
+</div>
+<div id="main_body">
+<div id="main_content">
+<div id="container1"> 
+<div id="left-panel" style="width:990;">
+<span style="color:green"><%= flash[:notice] %></span>
+<%= yield %>
+</div>
+
+</div>
+</div>
+</div>
+<div id="main_footer">
+<div id="footer-holder">   
+<span id="footer-left">
+		<!-- <a target="_blank" href="http://www.google.com/+MwaiMtingwi" style="margin-left:10;">prowess apps</a> -->   
+</span>
+<span id="footer-mid">
+	
+</span>
+<span id="footer-right">
+		  <!-- <p>&copy Standard Bank <?php echo date('Y'); ?>. All rights reserved</p> -->		  
+</span>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Sellies ePOS</title>
+<%= stylesheet_link_tag 'login.css', :media => 'all' %>
+<%= javascript_include_tag 'default.js' %>
+  <%= csrf_meta_tag %>
+</head>
+ 
+<body>
+
+<div id="login"> 
+<%= yield %>
+</div>
+
+</body>
+</html>

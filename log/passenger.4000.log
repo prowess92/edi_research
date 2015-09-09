@@ -1,0 +1,60 @@
+[ 2014-11-25 09:41:08.9360 3620/b73a3700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5za2ZvNTAvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.8.7-p374/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.skfo50/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6NDAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '3619', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-11-25 09:41:09.0349 3623/b748d700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3619/generation-0/request
+[ 2014-11-25 09:41:09.1007 3629/b6aea700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3619/generation-0/logging
+[ 2014-11-25 09:41:09.1013 3620/b73a3700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 3653 stdout: 
+[ 2014-11-25 09:41:16.4819 3623/b689cb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/sellies_rails/sellies started on PID 3653, listening on unix:/tmp/passenger.1.0.3619/generation-0/backends/preloader.3653
+App 3667 stdout: 
+App 3653 stderr: [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[ 2014-11-25 09:58:46.8649 4272/b73c8700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS52dHJ0a28vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.8.7-p374/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.vtrtko/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6NDAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '4271', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-11-25 09:58:46.8724 4275/b73fa700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.4271/generation-0/request
+[ 2014-11-25 09:58:46.8862 4280/b6a16700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.4271/generation-0/logging
+[ 2014-11-25 09:58:46.8866 4272/b73c8700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 4306 stdout: 
+App 4306 stdout: 
+[ 2014-11-25 09:58:50.5064 4275/b67feb40 Pool2/Implementation.cpp:281 ]: Could not spawn process for application /var/www/sellies_rails/sellies: An error occured while starting up the preloader.
+  Error ID: 65548a04
+  Error details saved to: /tmp/passenger-error-1kna4s.html
+  Message from application: Value assigned to config.time_zone not recognized.Run "rake -D time" for a list of tasks for finding appropriate time zone names. (RuntimeError)
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/activesupport-3.0.9/lib/active_support/railtie.rb:54
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/initializable.rb:25:in `instance_exec'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/initializable.rb:25:in `run'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/initializable.rb:50:in `run_initializers'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/initializable.rb:49:in `each'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/initializable.rb:49:in `run_initializers'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/application.rb:134:in `initialize!'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/application.rb:77:in `send'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+  /var/www/sellies_rails/sellies/config/environment.rb:5
+  config.ru:3:in `require'
+  config.ru:3
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `instance_eval'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1
+
+
+[ 2014-11-25 09:58:50.5239 4275/b5bfeb40 agents/HelperAgent/RequestHandler.h:2305 ]: [Client 20] Cannot checkout session because a spawning error occurred. The identifier of the error is . Please see earlier logs for details about the error.
+[ 2014-11-25 10:00:05.4901 4347/b73be700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xbzd3dDNpL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.8.7-p374/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1o7wt3i/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6NDAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '4346', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-11-25 10:00:05.4974 4350/b747e700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.4346/generation-0/request
+[ 2014-11-25 10:00:05.5072 4356/b6a53700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.4346/generation-0/logging
+[ 2014-11-25 10:00:05.5076 4347/b73be700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 4380 stdout: 
+[ 2014-11-25 10:00:09.5283 4350/b727db40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/sellies_rails/sellies started on PID 4380, listening on unix:/tmp/passenger.1.0.4346/generation-0/backends/preloader.4380
+App 4394 stdout: 
+App 4380 stderr: [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/stocks/index.html.erb:44: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+App 4380 stderr: /var/www/sellies_rails/sellies/app/views/items/_form.html.erb:1: warning: don't put space before argument parentheses
+[ 2015-06-25 09:31:58.1297 6298/b73f5700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5xYWxrZnEvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.qalkfq/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6NDAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '6297', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-06-25 09:31:58.1517 6301/b7486700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6297/generation-0/request
+[ 2015-06-25 09:31:58.3607 6307/b6b05700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6297/generation-0/logging
+[ 2015-06-25 09:31:58.3612 6298/b73f5700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 6340 stdout: 
+[ 2015-06-25 09:32:10.8185 6301/b689cb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/sellies_epos started on PID 6340, listening on unix:/tmp/passenger.1.0.6297/generation-0/backends/preloader.6340
+App 6366 stdout: 
+App 6373 stdout: 

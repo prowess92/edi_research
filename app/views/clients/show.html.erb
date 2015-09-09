@@ -1,0 +1,46 @@
+<span id="notice"><%= notice %></span>
+
+
+<p>
+  <b>Arv Number:</b>
+  <%= @client.arv_number %>
+</p>
+
+<p>
+  <b>Date of Birth:</b>
+  <%= @client.dob.to_date.to_s(:long) %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @client.gender %>
+</p>
+
+<p>
+  <b>Education:</b>
+  <%= @client.education %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @client.occupation %>
+</p>
+
+<p>
+  <b>Marital status:</b>
+  <%= @client.marital_status %>
+</p>
+
+<p>
+  <b>Literacy level:</b>
+  <%= @client.literacy_level %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @client.phone %>
+</p>
+
+<div id="staff_right" style="height:150;">
+<%= render 'appointment' %>
+</div>

@@ -1,0 +1,145 @@
+<!DOCTYPE html">
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>~</title>
+<%= stylesheet_link_tag 'jquery-ui.css' %>
+<%= stylesheet_link_tag 'default.css', :media => 'all' %>
+<%= stylesheet_link_tag 'perfect-scrollbar.css', :media => 'all' %>
+<% 
+  user = User.find(session[:user])
+  if !user.admin?
+%>
+<%= stylesheet_link_tag 'user.css', :media => 'all' %>
+<% end %>
+<%= javascript_include_tag 'jquery.js' %>
+<%= javascript_include_tag 'jquery.min.js' %>
+<%= javascript_include_tag 'perfect-scrollbar.js' %>
+<%= javascript_include_tag 'application' %><title>Sellies ePOS</title>
+<%= stylesheet_link_tag 'jquery-ui.css' %>
+<%= stylesheet_link_tag 'default.css', :media => 'all' %>
+<%= stylesheet_link_tag 'perfect-scrollbar.css', :media => 'all' %>
+<% 
+  user = User.find(session[:user])
+  if !user.admin?
+%>
+<%= stylesheet_link_tag 'user.css', :media => 'all' %>
+<% end %>
+<%= javascript_include_tag 'jquery.js' %>
+<%= javascript_include_tag 'jquery.min.js' %>
+<%= javascript_include_tag 'perfect-scrollbar.js' %>
+<%= javascript_include_tag 'application.js' %>
+</head>
+<style>
+/*#right-panel a{color:#145b80;}*/
+#main_content{overflow:hidden;height:500px;}
+#left-panel{position:relative;display:block;width:98.5%;height:500;overflow:auto}
+#logo{
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:100px;
+	top:-23px;
+    }
+#logo img{width:100;height:100;}
+#header_name{
+	top:0px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:235px;
+	width:700px;
+	}
+#main_menu{top:108}
+#main_body{top:15}
+#main_footer{
+	top:20;
+	margin:0 auto;
+	width:1024;
+	height:20;
+	overflow:hidden;
+}
+form input[type="text"]{width:300;}
+form input[type="password"]{width:300;}
+</style>
+<body>
+
+<div id="main_menu">
+<div class="cssMenu">
+<ul>
+    <li id="plus">&nbsp;</li>
+    <li><a href="/">Home</a></li>
+	<li><a href="#">Clients</a>
+	<ul>
+	    <li><%= link_to 'new', new_client_path %></li>
+	    <li><a href="/clients">view all</a></li>
+	</ul>
+	</li> 
+    <li><a href="#">Appointments</a>
+	<ul>
+	    <li><a href="#">view by date</a></li>
+	    <li><a href="#">view all</a></li>
+	</ul>
+    </li>
+    <li><a href="#">Users</a>
+	<!-- <ul>
+	    <li><a href="add_user_view.php">upload user</a></li>
+	    <li><a href="add_publication_view.php">upload publication</a></li>
+	    <li><a href="show_users_view.php">users list</a></li>
+	    <li><a href="show_publication_view.php">publications list</a></li>
+	</ul> -->
+    </li>
+   <li id="minus" style="width:465px">&nbsp;</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="main_header">
+<div id="logo">
+	  
+	  </div>
+<div id="header_name">
+<span>EDI RESEARCH</span>
+</div>
+<div id="top-header" style="top:50">
+<span>
+<% if logged_in? %>
+    <%= link_to "logout", :controller => "sessions",
+                          :action     => "destroy" %>
+<% end %>
+</span>
+</div>
+</div>
+<div id="main_body">
+<div id="main_content">
+<div id="container1"> 
+<div id="left-panel">
+<%= yield %>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="main_footer">
+<div id="footer-holder">   
+<span id="footer-left">
+		<!-- <a target="_blank" href="http://www.google.com/+MwaiMtingwi" style="margin-left:10;">prowess apps</a> -->   
+</span>
+<span id="footer-mid">
+	
+</span>
+<span id="footer-right">
+		 <!-- <p>&copy BICO <?php echo date('Y'); ?>. All rights reserved</p> -->		  
+</span>
+</div>
+</div>
+</body>
+</html>

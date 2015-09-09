@@ -1,0 +1,15 @@
+<h1><%= link_to "Users", :action => "index" %>
+  &rarr; User Profile 
+</h1>
+
+<div class="details">
+  <%= image_tag "dummy.png", :alt=> "profile", :class => "profile" %>
+  <h2><%=h @user.first_name %>&nbsp;<%=h @user.surname %> </h2>
+  <p>contact:&nbsp;<%=h @user.phone  %></p>
+  <p><%=h @user.profile %></p>
+
+  <div class="modify" >
+    <%= link_to "edit details" , edit_user_path(@user) %> |
+    <a href="/users/<%= @user.id %>/destroy" data-method="post" >delete user</a>
+</div>
+</div>

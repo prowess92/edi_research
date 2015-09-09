@@ -1,0 +1,7 @@
+class Sale < ActiveRecord::Base
+   def validate
+    if params[:in_stock] > quantity
+           errors.add_to_base("This item is not availablet in stock") 
+    end
+   end
+end

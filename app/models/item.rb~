@@ -1,0 +1,6 @@
+class Item < ActiveRecord::Base
+  #validation
+  validates_presence_of      :name
+  validates_presence_of      :unit_price
+  validates_presence_of      :phone
+end

@@ -1,0 +1,61 @@
+<script type="text/javascript">
+      $(document).ready(function ($) {
+        $('.report').perfectScrollbar({suppressScrollX: true});
+      });
+    </script>
+<% 
+  user = User.find(session[:user])
+
+  @start_date = params[:start_year] + "-" + params[:start_month] + "-" + params[:start_day]
+  @end_date = params[:end_year] + "-" + params[:end_month] + "-" + params[:end_day]
+ 
+  totalsales = 0
+  
+  if user.admin?
+%>
+<div class="report" id="info">
+<h1>Sellie's Enterprises Daily Sales Report @ <%= Time.now.to_s(:long) %> </h1>
+<ol >
+  <li>
+    <span id="title">Item</span>
+    <span id="title">Unit price</span>
+    <span id="title">Quantity</span>
+    <span id="title">Total cost</span>
+    <span id="title">Customer</span>
+    <span id="title">Sold by</span>
+  </li>
+  <li id="blank">&nbsp;</li>
+<% Sale.find_by_sql(["SELECT * FROM sellies.sales WHERE sales.created_at BETWEEN ? AND ? ", @start_date, @end_date]).each do |sale| %>
+  <li>
+    <% 
+      itm_id = sale.item_id
+      item = Item.find(itm_id) 
+      totalCost = item.unit_price * sale.quantity
+      totalsales = totalsales + totalCost 
+    %> 
+      <span><%= item.name %></span>
+      <span>MK&nbsp;<%= item.unit_price %></span>
+      <span><%= sale.quantity %></span>
+      <span>MK&nbsp;<%= totalCost %></span>
+      <span><%= sale.customer %></span>
+    <%  
+      usr_id = sale.user_id
+      user = User.find(usr_id) 
+    %>
+      <span><%= user.first_name + " " + user.surname %></span>
+      <li id="blank">&nbsp;</li>
+      <% end %>
+      <li style="background:#ecf3f7">
+      <span id="title">&nbsp;</span>
+      <span id="title">&nbsp;</span>
+      <span id="title">&nbsp;</span>
+      <span id="title">&nbsp;</span>
+      <span id="title">Total Sales:</span>
+      <span id="title">MK&nbsp;<%= totalsales %></span>
+  </li>
+  <li id="blank">&nbsp;</li>
+  </li>
+  <li id="blank">&nbsp;</li>
+</ol>
+</div>
+<% end %>

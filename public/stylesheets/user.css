@@ -1,0 +1,15 @@
+.bottom-panel{width:405;}
+.bottom-left{
+	width:573;
+	position:absolute;
+        left:430;
+        top:285;
+	height:243;
+	background:#fafcff;
+	overflow: hidden;
+ 	padding-left:10px;
+	border:1px dotted #440320;
+        border-radius:10;
+	}
+#info ol{padding:0; margin:0;width:390;}
+

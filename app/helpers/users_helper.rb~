@@ -1,0 +1,8 @@
+module UsersHelper
+  def image_for_admin_status(user)
+    if user.admin?
+      <span>king</span>
+    end
+  end
+
+end

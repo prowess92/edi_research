@@ -1,0 +1,16 @@
+<h1>Showing Available Users</h1>
+
+
+<ol class="list-deco">
+ <% for user in @users %>
+  <li>
+    <%= link_to h(user.first_name + " " + user.surname ), :action => "show", :id => user.id %>
+      
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile:&nbsp;<%= h(user.phone) %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email:&nbsp;<%= h(user.email) %><span>
+  </li>
+ <% end %>
+</ol>
+
+<div id='yellow'><%= link_to "Add user", :controller => 'users', :action => 'new'  %></div>
+

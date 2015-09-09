@@ -1,0 +1,18 @@
+#info ol{padding:0; margin:0;width:990;}
+#info ol li{
+	display:block;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;		
+	}
+#info ol #blank{
+	background: #fff;
+      }
+#info ol li span{
+	display:inline-block;
+	width:200;	
+	}
+#info ol li #title{
+	font-size:19;
+	font-weight:bold;
+	}

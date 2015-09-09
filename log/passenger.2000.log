@@ -1,0 +1,64 @@
+[ 2014-11-23 10:27:27.0641 22935/b73b1700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4ydzNxZXQvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.8.7-p374/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.2w3qet/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MjAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '22934', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2014-11-23 10:27:27.1722 22938/b73b5700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.22934/generation-0/request
+[ 2014-11-23 10:27:27.2354 22943/b6aa6700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.22934/generation-0/logging
+[ 2014-11-23 10:27:27.2357 22935/b73b1700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 22968 stdout: 
+App 22968 stdout: 
+[ 2014-11-23 10:27:31.0182 22938/b67bdb40 Pool2/Implementation.cpp:281 ]: Could not spawn process for application /var/www/sellies_rails/sellies: An error occured while starting up the preloader.
+  Error ID: 6f4fc119
+  Error details saved to: /tmp/passenger-error-LfIlqi.html
+  Message from application: undefined method `weeks' for 2:Fixnum (NoMethodError)
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/devise-1.0.11/lib/devise.rb:89
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:76:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:76:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:72:in `each'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:72:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:61:in `each'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:61:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler.rb:132:in `require'
+  /var/www/sellies_rails/sellies/config/application.rb:7
+  /var/www/sellies_rails/sellies/config/environment.rb:2:in `require'
+  /var/www/sellies_rails/sellies/config/environment.rb:2
+  config.ru:3:in `require'
+  config.ru:3
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `instance_eval'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1
+
+
+[ 2014-11-23 10:27:31.1016 22938/b59ffb40 agents/HelperAgent/RequestHandler.h:2305 ]: [Client 20] Cannot checkout session because a spawning error occurred. The identifier of the error is . Please see earlier logs for details about the error.
+App 23156 stdout: 
+App 23156 stdout: 
+[ 2014-11-23 10:28:27.0302 22938/b67bdb40 Pool2/Implementation.cpp:281 ]: Could not spawn process for application /var/www/sellies_rails/sellies: An error occured while starting up the preloader.
+  Error ID: b918345f
+  Error details saved to: /tmp/passenger-error-lAi1iv.html
+  Message from application: undefined method `weeks' for 2:Fixnum (NoMethodError)
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/devise-1.0.11/lib/devise.rb:89
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:76:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:76:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:72:in `each'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:72:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:61:in `each'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler/runtime.rb:61:in `require'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/bundler-1.6.2/lib/bundler.rb:132:in `require'
+  /var/www/sellies_rails/sellies/config/application.rb:7
+  /var/www/sellies_rails/sellies/config/environment.rb:2:in `require'
+  /var/www/sellies_rails/sellies/config/environment.rb:2
+  config.ru:3:in `require'
+  config.ru:3
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `instance_eval'
+  /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/rack-1.2.8/lib/rack/builder.rb:46:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1
+
+
+[ 2014-11-23 10:28:27.0496 22938/b59ffb40 agents/HelperAgent/RequestHandler.h:2305 ]: [Client 20] Cannot checkout session because a spawning error occurred. The identifier of the error is . Please see earlier logs for details about the error.
+[ 2014-11-23 10:28:27.0527 22938/b59ffb40 agents/HelperAgent/RequestHandler.h:2305 ]: [Client 22] Cannot checkout session because a spawning error occurred. The identifier of the error is . Please see earlier logs for details about the error.
+[ 2015-07-01 13:36:15.9137 30530/b73cc700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5yc2FlNG8vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.rsae4o/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MjAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '30529', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-07-01 13:36:16.0786 30533/b73f6700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.30529/generation-0/request
+[ 2015-07-01 13:36:16.1434 30538/b6aeb700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.30529/generation-0/logging
+[ 2015-07-01 13:36:16.1439 30530/b73cc700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 30570 stdout: 
+[ 2015-07-01 13:36:28.2124 30533/b67feb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/sellies_epos started on PID 30570, listening on unix:/tmp/passenger.1.0.30529/generation-0/backends/preloader.30570
+App 30593 stdout: 

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Sellies ePOS</title>
+<%= stylesheet_link_tag 'default.css' %>
+<%= stylesheet_link_tag 'info.css' %>
+<%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+ 
+<body>
+
+<div id="main_menu">
+<h2><span>S</span>ellies'&nbsp;&nbsp;&nbsp;<span>E</span>lectronic&nbsp;&nbsp;&nbsp;<span>P</span>oint&nbsp;&nbsp;of&nbsp;&nbsp;<span>S</span>ale</h2>
+<div id="logout">
+   <% if logged_in? %>
+    &nbsp;
+    <%= link_to "logout", :controller => "sessions",
+                          :action     => "destroy" %>
+<% end %>
+</div>
+<ul id="cssMenu">
+    <li ><a href="#">Sales</a>
+    	<ul>
+	    <li><a href="/sales/new/">New</a></li>
+	    <li><a href="/sales/">Edit</a></li>
+	</ul>
+    </li>
+    <li><a href="#">Stock</a>
+    	<ul>
+	    <li><a href="/stocks/new/">New</a></li>
+	    <li><a href="/stocks/">Edit</a></li>
+	</ul>
+    </li>  
+    <li><a href="#">Reports</a></li> 
+    <li><a href="#">Administration</a></li>
+</ul>
+</div>
+<div id="content">
+<div id="main_body">
+<div id="main_content"> 
+<p style="color:green"><%= flash[:notice] %></p>
+<%= yield %>
+</div>
+</div>
+</div>
+<div id="main_footer">
+<div id="footer-left">
+		
+	</div>
+
+	<div id="footer-right">
+		  
+	</div>
+</div>
+</body>
+</html>

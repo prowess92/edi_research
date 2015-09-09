@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+admin_user: 
+  phone:		0996234931
+  first_name:		Mwai
+  surname:		Mtingwi
+  salt:			test_salt
+  encrypted_password: 	<%= User.encrypt('vanawsum', 'test_salt') %>
+
+non_admin_user:
+  phone:		996234935
+  first_name:		John
+  surname:		Mtingwi
+  salt:			test_salt
+  encrypted_password: 	<%= User.encrypt('mtingwi', 'test_salt') %>
+
+one:
+  first_name: MyString
+  surname: MyString
+  phone: 1
+
+two:
+  first_name: MyString
+  surname: MyString
+  phone: 1

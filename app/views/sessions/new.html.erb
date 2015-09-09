@@ -1,0 +1,18 @@
+<div class="container">
+	<section id="content">
+		<%= form_tag ({action: "create"}) do %>
+			<h1>login</h1>
+			<p style="color:red"><%= flash[:notice] %></p>
+			<div>
+				<%= text_field_tag(:email, params[:email], :placeholder => 'email') %>
+			</div>
+			<div>
+				<%= password_field_tag(:password, params[:password], :placeholder => 'password') %>
+			</div>
+			<div>
+				<%= submit_tag ("login") %>
+                        </div>
+		<% end %> 
+		               		
+	</section>
+</div>

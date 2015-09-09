@@ -1,0 +1,29 @@
+<h2>Schedule appointment</h2>
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :client_id, :value => @client.id %>
+  </div>
+  <div class="field">
+    <%= f.label :due_date %>
+    <input type="date" id="appointment_due_date" name="appointment[due_date]" / >
+    </div>
+  <div class="field">
+   <%= f.hidden_field :created_by, :value => session[:user]%>
+  </div>
+  <br />
+  <div class="actions">
+    <%= f.submit :class => 'more_button' %>
+  </div>
+<% end %>

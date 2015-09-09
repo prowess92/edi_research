@@ -1,0 +1,26 @@
+<h1>Listing appointments</h1>
+
+<table style="width:99%">
+  <tr style="background:#fff">
+    <th>ARV Number</th>
+    <th>Due date</th>
+    <th>Created by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @appointments.each do |appointment| %>
+  <tr>
+    <% client = Client.find(appointment.client_id) %>
+    <td><%= client.arv_number %></td>
+    <td><%= appointment.due_date.to_date.to_s(:long) %></td>
+    <td><%= appointment.created_by %></td>
+    <td><%= link_to 'Show', appointment %></td>
+    <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+    <td><a href="appointments/<%= appointment.id %>/destroy">delete</a></td>
+  </tr>
+  <tr style="background:#fff"><td style="background:#fff" colspan="6">&nbsp;</td></tr>
+<% end %>
+</table>
+
+

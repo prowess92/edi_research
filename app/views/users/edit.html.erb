@@ -1,0 +1,53 @@
+<h1>Edit user</h1>
+
+<div class="form">
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being created:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+  <legend>Edit <%=h @user.first_name %>'s Details</legend>
+  <%= form_for(@user) do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  
+  <div class="field">
+     <%= f.label :surname %><br />
+     <%= f.text_field :surname %>
+   </div>
+
+   <div class="field">
+     <%= f.label :email %><br />
+     <%= f.text_field :email %>
+   </div>
+
+   <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+   </div>
+   
+   <div class="field">
+    Administrator:
+    <%= f.radio_button :admin, true %>
+    <label for="user_admin_true" >Yes</label>
+    <%= f.radio_button :admin, false %>
+    <label for="user_admin_false" >No</label>
+   </div>
+   
+   <div class="actions">
+    <%= f.submit %>
+  &nbsp;
+   <%= link_to "cancel" , :action => "index" %>
+  </div>
+  <% end %>  
+  </fieldset>
+</div> 

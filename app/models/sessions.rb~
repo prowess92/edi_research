@@ -1,0 +1,3 @@
+class Sessions < ActiveRecord::Base
+	validates_presence_of      :password
+end
