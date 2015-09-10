@@ -1,0 +1,34 @@
+  [1m[36m (19.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20141121093348)
+Migrating to CreateLogins (20141121093847)
+Migrating to AddSaltToUsers (20141121123245)
+Migrating to AddAdminToUsers (20141121152055)
+Migrating to AddEmailtoUsers (20141121180508)
+Migrating to AddEmailToUsers (20141121180655)
+Migrating to AddTypeToItems (20141124094458)
+Migrating to AddUserIdToSales (20141124111958)
+Migrating to AddDiscountToSales (20150525072827)
+Migrating to EditDiscountToSales (20150525073354)
+Migrating to AddStatusToItem (20150610084939)
+Migrating to AddActiveIdToItem (20150610085043)
+Migrating to CreateClients (20150909091343)
+Migrating to AddArvNumberToClients (20150909093420)
+Migrating to RemoveFirstnameFromClients (20150909093452)
+Migrating to RemoveSurnameFromClients (20150909093531)
+Migrating to CreateAppointments (20150909103956)
+Migrating to AddStatusToAppointment (20150910095641)
+  [1m[35m (887.0ms)[0m  ALTER TABLE `appointments` ADD `status` varchar(255)
+  [1m[36m (75.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150910095641')[0m
+Migrating to CreateClientMedicals (20150910100242)
+  [1m[35m (350.4ms)[0m  CREATE TABLE `client_medicals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `client_id` decimal, `regimen` varchar(255), `sulphur_allegy` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (53.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150910100242')[0m
+Migrating to AddDrugsPastToAppointment (20150910100500)
+  [1m[35m (660.6ms)[0m  ALTER TABLE `appointments` ADD `drugs_past` decimal
+  [1m[36m (54.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150910100500')[0m
+Migrating to AddTakenEveningToAppointment (20150910100531)
+  [1m[35m (839.5ms)[0m  ALTER TABLE `appointments` ADD `taken_evening` decimal
+  [1m[36m (53.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150910100531')[0m
+Migrating to AddTakenMorningToAppointment (20150910100554)
+  [1m[35m (792.3ms)[0m  ALTER TABLE `appointments` ADD `taken_morning` decimal
+  [1m[36m (65.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150910100554')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  client_id: 9.99
+  regimen: MyString
+  sulphur_allegy: MyString
+
+two:
+  client_id: 9.99
+  regimen: MyString
+  sulphur_allegy: MyString

@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Sellies::Application.load_tasks
+Edi::Application.load_tasks

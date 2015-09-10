@@ -3568,3 +3568,122 @@
 [09/09/15 22:34:56 +0200 mwai (10697)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
 [09/09/15 22:34:56 +0200 mwai (10697)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
 [09/09/15 22:37:03 +0200 mwai (10697)] INFO : Starting Agent shutdown
+[09/10/15 11:54:19 +0200 mwai (11751)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 11:54:19 +0200 mwai (11751)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 11:54:19 +0200 mwai (11751)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Environment: development
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : No known dispatcher detected.
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Application: My Application (Development)
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Net instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing deferred Rack instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 11:54:20 +0200 mwai (11751)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 11:54:21 +0200 mwai (11751)] INFO : Finished instrumentation
+[09/10/15 11:54:21 +0200 mwai (11751)] INFO : Starting Agent shutdown
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Environment: development
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : No known dispatcher detected.
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Application: My Application (Development)
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing Net instrumentation
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing deferred Rack instrumentation
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 11:56:05 +0200 mwai (11875)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 11:56:06 +0200 mwai (11875)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 11:56:06 +0200 mwai (11875)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 11:56:06 +0200 mwai (11875)] INFO : Finished instrumentation
+[09/10/15 11:56:06 +0200 mwai (11875)] INFO : Starting Agent shutdown
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : Environment: development
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : No known dispatcher detected.
+[09/10/15 11:56:39 +0200 mwai (11892)] INFO : Application: My Application (Development)
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Net instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing deferred Rack instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 11:56:40 +0200 mwai (11892)] INFO : Finished instrumentation
+[09/10/15 11:56:41 +0200 mwai (11892)] INFO : Starting Agent shutdown
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : Environment: development
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : No known dispatcher detected.
+[09/10/15 12:02:40 +0200 mwai (11974)] INFO : Application: My Application (Development)
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Net instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing deferred Rack instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 12:02:41 +0200 mwai (11974)] INFO : Finished instrumentation
+[09/10/15 12:02:43 +0200 mwai (11974)] INFO : Starting Agent shutdown
+[09/10/15 12:04:58 +0200 mwai (11986)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 12:04:58 +0200 mwai (11986)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 12:04:58 +0200 mwai (11986)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Environment: development
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : No known dispatcher detected.
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Application: My Application (Development)
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Net instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing deferred Rack instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 12:04:59 +0200 mwai (11986)] INFO : Finished instrumentation
+[09/10/15 12:05:00 +0200 mwai (11986)] INFO : Starting Agent shutdown
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Environment: development
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : No known dispatcher detected.
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Application: My Application (Development)
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Net instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing deferred Rack instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 12:05:30 +0200 mwai (12014)] INFO : Finished instrumentation
+[09/10/15 12:05:31 +0200 mwai (12014)] INFO : Starting Agent shutdown
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Environment: development
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : No known dispatcher detected.
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Application: My Application (Development)
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing Net instrumentation
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing deferred Rack instrumentation
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing ActiveRecord instrumentation
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/15 12:05:52 +0200 mwai (12019)] INFO : Installing Rails 3 Error instrumentation
+[09/10/15 12:05:53 +0200 mwai (12019)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/15 12:05:53 +0200 mwai (12019)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/15 12:05:53 +0200 mwai (12019)] INFO : Finished instrumentation
+[09/10/15 12:05:54 +0200 mwai (12019)] INFO : Starting Agent shutdown

@@ -11,12 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150909103956) do
+ActiveRecord::Schema.define(:version => 20150910100554) do
 
   create_table "appointments", :force => true do |t|
-    t.decimal  "client_id",  :precision => 10, :scale => 0
+    t.decimal  "client_id",     :precision => 10, :scale => 0
     t.date     "due_date"
-    t.decimal  "created_by", :precision => 10, :scale => 0
+    t.decimal  "created_by",    :precision => 10, :scale => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "status"
+    t.decimal  "drugs_past",    :precision => 10, :scale => 0
+    t.decimal  "taken_evening", :precision => 10, :scale => 0
+    t.decimal  "taken_morning", :precision => 10, :scale => 0
+  end
+
+  create_table "client_medicals", :force => true do |t|
+    t.decimal  "client_id",      :precision => 10, :scale => 0
+    t.string   "regimen"
+    t.string   "sulphur_allegy"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

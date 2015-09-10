@@ -1,0 +1,83 @@
+class ClientMedicalsController < ApplicationController
+  # GET /client_medicals
+  # GET /client_medicals.json
+  def index
+    @client_medicals = ClientMedical.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @client_medicals }
+    end
+  end
+
+  # GET /client_medicals/1
+  # GET /client_medicals/1.json
+  def show
+    @client_medical = ClientMedical.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @client_medical }
+    end
+  end
+
+  # GET /client_medicals/new
+  # GET /client_medicals/new.json
+  def new
+    @client_medical = ClientMedical.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @client_medical }
+    end
+  end
+
+  # GET /client_medicals/1/edit
+  def edit
+    @client_medical = ClientMedical.find(params[:id])
+  end
+
+  # POST /client_medicals
+  # POST /client_medicals.json
+  def create
+    @client_medical = ClientMedical.new(params[:client_medical])
+
+    respond_to do |format|
+      if @client_medical.save
+        format.html { redirect_to @client_medical, notice: 'Client medical was successfully created.' }
+        format.json { render json: @client_medical, status: :created, location: @client_medical }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @client_medical.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /client_medicals/1
+  # PUT /client_medicals/1.json
+  def update
+    @client_medical = ClientMedical.find(params[:id])
+
+    respond_to do |format|
+      if @client_medical.update_attributes(params[:client_medical])
+        format.html { redirect_to @client_medical, notice: 'Client medical was successfully updated.' }
+        format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @client_medical.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /client_medicals/1
+  # DELETE /client_medicals/1.json
+  def destroy
+    @client_medical = ClientMedical.find(params[:id])
+    @client_medical.destroy
+
+    respond_to do |format|
+      format.html { redirect_to client_medicals_url }
+      format.json { head :ok }
+    end
+  end
+end

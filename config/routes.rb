@@ -1,6 +1,8 @@
 
-Sellies::Application.routes.draw do
+Edi::Application.routes.draw do
   
+
+  resources :client_medicals
 
   resources :appointments
 

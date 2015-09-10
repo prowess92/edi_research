@@ -1,0 +1,2 @@
+module ClientMedicalsHelper
+end

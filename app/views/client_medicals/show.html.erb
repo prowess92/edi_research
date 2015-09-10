@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @client_medical.client_id %>
+</p>
+
+<p>
+  <b>Regimen:</b>
+  <%= @client_medical.regimen %>
+</p>
+
+<p>
+  <b>Sulphur allegy:</b>
+  <%= @client_medical.sulphur_allegy %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_medical_path(@client_medical) %> |
+<%= link_to 'Back', client_medicals_path %>

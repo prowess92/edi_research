@@ -1,0 +1,27 @@
+<h1>Listing client_medicals</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Regimen</th>
+    <th>Sulphur allegy</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @client_medicals.each do |client_medical| %>
+  <tr>
+    <td><%= client_medical.client_id %></td>
+    <td><%= client_medical.regimen %></td>
+    <td><%= client_medical.sulphur_allegy %></td>
+    <td><%= link_to 'Show', client_medical %></td>
+    <td><%= link_to 'Edit', edit_client_medical_path(client_medical) %></td>
+    <td><%= link_to 'Destroy', client_medical, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Client medical', new_client_medical_path %>
