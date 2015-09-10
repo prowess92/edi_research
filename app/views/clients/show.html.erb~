@@ -1,5 +1,7 @@
+<style>
+#staff_right p{width:97%}
+</style>
 <span id="notice"><%= notice %></span>
-
 
 <p>
   <b>Arv Number:</b>
@@ -41,6 +43,24 @@
   <%= @client.phone %>
 </p>
 
-<div id="staff_right" style="height:200;">
+<div id="staff_right" style="height:150;">
+<%
+ appointment = Appointment.find(:first, :conditions => [ "due_date = ?",  Date.today], :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if appointment.nil?
+%>
 <%= render 'appointment' %>
+<% 
+else
+%>
+<p>
+  <b>Scheduled for Appointment on:</b>
+</p>
+<p>
+  <%= appointment.due_date.to_date.to_s(:long) %>
+</p>
+
+<%
+end
+%>
 </div>
