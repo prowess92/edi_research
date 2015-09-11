@@ -1182,3 +1182,665 @@ Rendered clients/index.html.erb within layouts/application (70.8ms)
   [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
 Completed 200 OK in 140ms (Views: 122.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:02:34 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (96.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 191ms (Views: 154.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-09-11 21:02:51 +0200
+  Processing by ClientsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT `clients`.* FROM `clients` [0m
+Rendered clients/index.html.erb within layouts/application (16.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 126.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-09-11 21:02:54 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 2) LIMIT 1
+Rendered clients/_medical.html.erb (11.8ms)
+Rendered clients/show.html.erb within layouts/application (26.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 165ms (Views: 136.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2015-09-11 21:02:59 +0200
+  Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+Rendered appointments/index.html.erb within layouts/application (34.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 167ms (Views: 144.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/appointments/4/destroy" for 127.0.0.1 at 2015-09-11 21:03:03 +0200
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 4 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM `appointments` WHERE `appointments`.`id` = 4
+  [1m[36m (133.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 167ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2015-09-11 21:03:03 +0200
+  Processing by AppointmentsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+Rendered appointments/index.html.erb within layouts/application (89.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 255ms (Views: 141.2ms | ActiveRecord: 99.3ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-09-11 21:03:09 +0200
+  Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` 
+Rendered clients/index.html.erb within layouts/application (13.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 144ms (Views: 126.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-09-11 21:03:11 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 2) LIMIT 1[0m
+Rendered clients/_medical.html.erb (11.1ms)
+Rendered clients/show.html.erb within layouts/application (26.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 164ms (Views: 137.0ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/client_medicals" for 127.0.0.1 at 2015-09-11 21:03:17 +0200
+  Processing by ClientMedicalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+nACJfJ5hnAZeAPvtKac7JIr1KKVEZCuTltQIO1d3Y=", "client_medical"=>{"client_id"=>"2", "regimen"=>"0A", "sulphur_allegy"=>"yes"}, "commit"=>"add"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `client_medicals` (`client_id`, `created_at`, `regimen`, `sulphur_allegy`, `updated_at`) VALUES (2, '2015-09-11 21:03:17', '0A', 'yes', '2015-09-11 21:03:17')[0m
+  [1m[35m (192.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/clients/2
+Completed 302 Found in 249ms
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-09-11 21:03:17 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1
+  [1m[36mClientMedical Load (0.8ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 2) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (client_id = 2) LIMIT 1
+Rendered clients/_appointment.html.erb (15.6ms)
+Rendered clients/show.html.erb within layouts/application (40.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 122ms (Views: 90.3ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-11 21:03:46 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+nACJfJ5hnAZeAPvtKac7JIr1KKVEZCuTltQIO1d3Y=", "appointment"=>{"client_id"=>"2", "total_drugs"=>"60", "taken_morning"=>"1", "taken_evening"=>"1", "due_date"=>"2015-10-11", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (2, '2015-09-11 21:03:46', 7, '2015-10-11', NULL, 1, 1, 60, '2015-09-11 21:03:46')
+  [1m[36m (121.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/2
+Completed 302 Found in 175ms
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-09-11 21:03:46 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 2) LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 2) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (36.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 175ms (Views: 142.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2015-09-11 21:05:46 +0200
+  Processing by AppointmentsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mAppointment Load (1.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 2 LIMIT 1[0m
+Rendered appointments/index.html.erb within layouts/application (35.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 164ms (Views: 84.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-09-11 21:05:56 +0200
+  Processing by ClientsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` [0m
+Rendered clients/index.html.erb within layouts/application (72.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 124.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:06:16 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (98.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 149.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:07:48 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (96.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 182ms (Views: 150.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:08:35 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (96.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 178ms (Views: 149.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:08:36 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (103.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 189ms (Views: 156.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:08:37 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (101.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 185ms (Views: 154.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:10:25 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (36.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 177ms (Views: 149.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:14:37 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM appointments WHERE due_date < '2015-09-11' AND client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (undefined method `total_drugs' for []:Array):
+    19: %>
+    20: 	<p>
+    21: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    22:           <%= appointment.total_drugs %>
+    23: 	</p>
+    24: 	<p>
+    25:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:22:in `_app_views_clients_show_html_erb___946058097__625938728'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:15:27 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM appointments WHERE due_date < DATE('2015-09-11') AND client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (74.9ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (undefined method `total_drugs' for []:Array):
+    19: %>
+    20: 	<p>
+    21: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    22:           <%= appointment.total_drugs %>
+    23: 	</p>
+    24: 	<p>
+    25:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:22:in `_app_views_clients_show_html_erb___946058097__651330068'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:15:29 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT * FROM appointments WHERE due_date < DATE('2015-09-11') AND client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined method `total_drugs' for []:Array):
+    19: %>
+    20: 	<p>
+    21: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    22:           <%= appointment.total_drugs %>
+    23: 	</p>
+    24: 	<p>
+    25:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:22:in `_app_views_clients_show_html_erb___946058097__651330068'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (59.2ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (65.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:17:29 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined method `total_drugs' for []:Array):
+    19: %>
+    20: 	<p>
+    21: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    22:           <%= appointment.total_drugs %>
+    23: 	</p>
+    24: 	<p>
+    25:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:22:in `_app_views_clients_show_html_erb___946058097__644733658'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:17:30 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (undefined method `total_drugs' for []:Array):
+    19: %>
+    20: 	<p>
+    21: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    22:           <%= appointment.total_drugs %>
+    23: 	</p>
+    24: 	<p>
+    25:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:22:in `_app_views_clients_show_html_erb___946058097__644733658'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:19:23 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (63.8ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0xb4a7e338>:0xb4767208>):
+    13: 
+    14:          end
+    15: 
+    16: 	if appointment.nil?
+    17: %>
+    18: 	<%= render 'appointment' %>
+    19: <% 
+  app/views/clients/show.html.erb:16:in `_app_views_clients_show_html_erb___946058097__633636568'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (59.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (75.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:20:09 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.9ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (121.9ms)
+Completed 500 Internal Server Error in 169ms
+
+ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0xb2b00948>:0xb2b42ec4>):
+    13: 
+    14:          end
+    15: 
+    16: 	if appointment.id.nil?
+    17: %>
+    18: 	<%= render 'appointment' %>
+    19: <% 
+  app/views/clients/show.html.erb:16:in `_app_views_clients_show_html_erb___946058097__648382458'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:21:03 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (61.3ms)
+Completed 500 Internal Server Error in 169ms
+
+ActionView::Template::Error (undefined local variable or method `appointment_id' for #<#<Class:0xb2bb6dec>:0xb391923c>):
+    13:          appointment_id = appointment.id
+    14:          end
+    15: 
+    16: 	if appointment_id.nil?
+    17: %>
+    18: 	<%= render 'appointment' %>
+    19: <% 
+  app/views/clients/show.html.erb:16:in `_app_views_clients_show_html_erb___946058097__629143398'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:22:29 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.9ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (63.2ms)
+Completed 500 Internal Server Error in 109ms
+
+ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0xb31b3d6c>:0xb2f39870>):
+    21: %>
+    22: 	<p>
+    23: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    24:           <%= appointment.total_drugs %>
+    25: 	</p>
+    26: 	<p>
+    27:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:24:in `_app_views_clients_show_html_erb___946058097__646332548'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:23:05 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (Couldn't find Appointment with id=1):
+    8: 
+    9: if !medical.nil?
+    10:          today = Date.today
+    11:           appointment = Appointment.find(@client.id)
+    12: 	 Appointment.find_by_sql(["SELECT * FROM edi.appointments WHERE appointments.due_date < DATE(?) AND appointments.client_id = ? LIMIT 1", today, @client.id]).each do |appointment|
+    13:          appointment_id = appointment.id
+    14:          end
+  app/views/clients/show.html.erb:11:in `_app_views_clients_show_html_erb___946058097__657014038'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:23:33 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1
+Rendered clients/show.html.erb within layouts/application (125.0ms)
+Completed 500 Internal Server Error in 168ms
+
+ActionView::Template::Error (undefined local variable or method `appointment_id' for #<#<Class:0xb2571a04>:0xb2577b0c>):
+    13:          appointment_id = appointment.id
+    14:          end
+    15: 
+    16: 	if appointment_id.nil?
+    17: %>
+    18: 	<%= render 'appointment' %>
+    19: <% 
+  app/views/clients/show.html.erb:16:in `_app_views_clients_show_html_erb___946058097__651393738'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:23:47 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT * FROM edi.appointments WHERE appointments.due_date < DATE('2015-09-11') AND appointments.client_id = 1 LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (undefined method `total_drugs' for #<Array:0xb4d21e50>):
+    21: %>
+    22: 	<p>
+    23: 	  <b>Total drugs given on previous visit:</b><br /><br />
+    24:           <%= appointment.total_drugs %>
+    25: 	</p>
+    26: 	<p>
+    27:          <b>Next appointment scheduled for:</b><br /><br />
+  app/views/clients/show.html.erb:24:in `_app_views_clients_show_html_erb___946058097__659602648'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:24:35 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (76.8ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (Couldn't find Appointment without an ID):
+    8: 
+    9: if !medical.nil?
+    10:          today = Date.today
+    11:           appointment = Appointment.find()
+    12: 	 Appointment.find_by_sql(["SELECT * FROM edi.appointments WHERE appointments.due_date < DATE(?) AND appointments.client_id = ? LIMIT 1", today, @client.id]).each do |appointment|
+    13:          appointment_id = appointment.id
+    14:          end
+  app/views/clients/show.html.erb:11:in `_app_views_clients_show_html_erb___946058097__663212108'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:24:44 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionView::Template::Error (Couldn't find Appointment without an ID):
+    8: 
+    9: if !medical.nil?
+    10:          today = Date.today
+    11:           appointment = Appointment.find()
+    12: 	 Appointment.find_by_sql(["SELECT * FROM edi.appointments WHERE appointments.due_date < DATE(?) AND appointments.client_id = ? LIMIT 1", today, @client.id]).each do |appointment|
+    13:          appointment_id = appointment.id
+    14:          end
+  app/views/clients/show.html.erb:11:in `_app_views_clients_show_html_erb___946058097__663212108'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:25:02 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (37.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 185ms (Views: 150.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:26:20 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (39.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 189ms (Views: 154.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:28:19 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (103.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 187ms (Views: 157.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-11 21:30:17 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-11' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (81.7ms)
+Rendered clients/show.html.erb within layouts/application (107.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 191ms (Views: 160.3ms | ActiveRecord: 9.7ms)
