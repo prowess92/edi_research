@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2015 at 12:35 PM
+-- Generation Time: Sep 11, 2015 at 07:33 PM
 -- Server version: 5.6.25-0ubuntu0.15.04.1
 -- PHP Version: 5.6.4-4ubuntu6.2
 
@@ -30,18 +30,22 @@ CREATE TABLE IF NOT EXISTS `appointments` (
 `id` int(11) NOT NULL,
   `client_id` decimal(10,0) DEFAULT NULL,
   `due_date` date DEFAULT NULL,
+  `total_drugs` decimal(10,0) DEFAULT NULL,
+  `taken_evening` decimal(10,0) DEFAULT NULL,
+  `taken_morning` decimal(10,0) DEFAULT NULL,
   `created_by` decimal(10,0) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `updated_at` datetime DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `appointments`
 --
 
-INSERT INTO `appointments` (`id`, `client_id`, `due_date`, `created_by`, `created_at`, `updated_at`) VALUES
-(4, 2, '2015-09-24', 9, '2015-09-09 14:17:00', '2015-09-09 14:17:00'),
-(6, 1, '2015-09-17', 7, '2015-09-09 15:55:10', '2015-09-09 15:55:10');
+INSERT INTO `appointments` (`id`, `client_id`, `due_date`, `total_drugs`, `taken_evening`, `taken_morning`, `created_by`, `created_at`, `updated_at`, `status`) VALUES
+(4, 2, '2015-09-24', NULL, NULL, NULL, 9, '2015-09-09 14:17:00', '2015-09-09 14:17:00', NULL),
+(7, 1, '2015-10-11', 30, 0, 1, 7, '2015-09-11 18:26:57', '2015-09-11 18:26:57', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,6 +74,28 @@ CREATE TABLE IF NOT EXISTS `clients` (
 INSERT INTO `clients` (`id`, `arv_number`, `dob`, `gender`, `education`, `occupation`, `marital_status`, `literacy_level`, `phone`, `created_at`, `updated_at`) VALUES
 (1, 'QECH-ARV-200', '1999-02-10', 'Male', 'Secondary', 'Labourer', 'Married', 'able to read', '09954871', '2015-09-09 12:11:38', '2015-09-09 12:11:38'),
 (2, 'QECH 19233', '1992-09-08', 'Female', 'Tertiary', 'Mechanic', 'Single', 'able to read', '0993030434', '2015-09-09 12:17:19', '2015-09-09 12:17:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_medicals`
+--
+
+CREATE TABLE IF NOT EXISTS `client_medicals` (
+`id` int(11) NOT NULL,
+  `client_id` decimal(10,0) DEFAULT NULL,
+  `regimen` varchar(255) DEFAULT NULL,
+  `sulphur_allegy` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `client_medicals`
+--
+
+INSERT INTO `client_medicals` (`id`, `client_id`, `regimen`, `sulphur_allegy`, `created_at`, `updated_at`) VALUES
+(4, 1, '5A', 'yes', '2015-09-11 18:18:44', '2015-09-11 18:18:44');
 
 -- --------------------------------------------------------
 
@@ -2471,7 +2497,12 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20150909093420'),
 ('20150909093452'),
 ('20150909093531'),
-('20150909103956');
+('20150909103956'),
+('20150910095641'),
+('20150910100242'),
+('20150910100500'),
+('20150910100531'),
+('20150910100554');
 
 -- --------------------------------------------------------
 
@@ -3504,6 +3535,12 @@ ALTER TABLE `clients`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `client_medicals`
+--
+ALTER TABLE `client_medicals`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
@@ -3547,12 +3584,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `client_medicals`
+--
+ALTER TABLE `client_medicals`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `items`
 --
