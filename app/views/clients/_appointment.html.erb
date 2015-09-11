@@ -1,4 +1,4 @@
-<h2>Schedule appointment</h2>
+<h2 style="font-size:22;">Enter appointment and dispensation data</h2>
 <%= form_for(@appointment) do |f| %>
   <% if @appointment.errors.any? %>
     <div id="error_explanation">
@@ -16,11 +16,23 @@
     <%= f.hidden_field :client_id, :value => @client.id %>
   </div>
   <div class="field">
-    <%= f.label :due_date %>
+   <%= f.label :total_drugs %>
+   <%= f.number_field :total_drugs %>
+  </div>
+  <div class="field">
+   <label>Drugs taken in the morning (per day)</label>
+   <%= f.number_field :taken_morning %>
+  </div>
+  <div class="field">
+   <label>Drugs taken in the evening (per day)</label>
+   <%= f.number_field :taken_evening %>
+  </div>
+  <div class="field">
+    <label>Next appointment date</label>
     <input type="date" id="appointment_due_date" name="appointment[due_date]" / >
     </div>
   <div class="field">
-   <%= f.hidden_field :created_by, :value => session[:user]%>
+   <%= f.hidden_field :created_by, :value => session[:user] %>
   </div>
   <br />
   <div class="actions">

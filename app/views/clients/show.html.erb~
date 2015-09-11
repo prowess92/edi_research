@@ -1,8 +1,39 @@
 <style>
-#staff_right p{width:97%}
+#staff_right p{width:98%}
 </style>
 <span id="notice"><%= notice %></span>
+<div id="staff_right">
+<%
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
 
+if !medical.nil?
+	 appointment = Appointment.find(:first, :conditions => [ "due_date = ?",  Date.today], :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+	if appointment.nil?
+%>
+	<%= render 'appointment' %>
+<% 
+	else
+%>
+	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          <%= appointment.total_drugs %>
+	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 <%= appointment.due_date.to_date.to_s(:long) %>
+	</p>
+<%
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+%>
+	<%= render 'medical' %>
+<%
+end
+%>
+</div>
 <p>
   <b>Arv Number:</b>
   <%= @client.arv_number %>
@@ -42,25 +73,13 @@
   <b>Phone:</b>
   <%= @client.phone %>
 </p>
-
-<div id="staff_right" style="height:150;">
-<%
- appointment = Appointment.find(:first, :conditions => [ "due_date = ?",  Date.today], :conditions => [ "client_id = ?", @client.id ], :limit => 1)
-
-if appointment.nil?
-%>
-<%= render 'appointment' %>
-<% 
-else
-%>
+<% if !medical.nil? %>
 <p>
-  <b>Scheduled for Appointment on:</b>
+  <b>Regimen:</b>
+  <%= regimen %>
 </p>
 <p>
-  <%= appointment.due_date.to_date.to_s(:long) %>
+ <b>Takes CPT:</b>
+ <%= cpt %>
 </p>
-
-<%
-end
-%>
-</div>
+<% end %>

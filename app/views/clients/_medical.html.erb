@@ -1,0 +1,29 @@
+<%= form_for(@client_medical) do |f| %>
+  <% if @client_medical.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client_medical.errors.count, "error") %> prohibited this client_medical from being saved:</h2>
+
+      <ul>
+      <% @client_medical.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :client_id, :value => @client.id %>
+  </div>
+  <div class="field">
+    <%= f.label :regimen %>
+    <%= f.select(:regimen, options_for_select(['0A', '0P', '1A', '1P', '2A',  '2P', '3A', '3P', '4A', '4P', '5A', '6A', '7A', '8A', '9A', 'non standard'])) %>
+  </div>
+  <div class="field">
+    <label>Takes CPT</label>
+    <%= f.select(:sulphur_allegy, options_for_select(['yes', 'no'])) %>
+  </div>
+  <br />
+  <div class="actions">
+    <%= f.submit :class => 'more_button', :value => 'add' %>
+  </div>
+<% end %>

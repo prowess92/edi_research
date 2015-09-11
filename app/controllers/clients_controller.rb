@@ -15,6 +15,7 @@ class ClientsController < ApplicationController
   def show
     @client = Client.find(params[:id])
     @appointment = Appointment.new
+    @client_medical = ClientMedical.new
 
     respond_to do |format|
       format.html # show.html.erb

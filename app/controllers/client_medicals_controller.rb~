@@ -48,7 +48,7 @@ class ClientMedicalsController < ApplicationController
         format.html { redirect_to @client, notice: 'Client medical if was successfully added.' }
         format.json { render json: @client, status: :created, location: @client }
       else
-        format.html { render controller: 'clients', action: "show" }
+        format.html { render controller:client, action: "show" }
         format.json { render json: @client_medical.errors, status: :unprocessable_entity }
       end
     end
