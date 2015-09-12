@@ -9,9 +9,9 @@ medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.i
 if !medical.nil?
          today = Date.today
 
-	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ], :limit => 1)
+	 appointment = Appointment.find(:first, :conditions => [ "due_date < ? AND client_id = ?",  today, @client.id ], :limit => 200)
 
-	if !appointment.nil?
+	if appointment.nil?
 %>
 	<%= render 'appointment' %>
 <% 

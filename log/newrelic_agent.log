@@ -3774,3 +3774,25 @@
 [09/12/15 06:39:14 +0200 mwai (10852)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 20.018971483 seconds: getaddrinfo: Temporary failure in name resolution
 [09/12/15 06:39:54 +0200 mwai (10852)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
 [09/12/15 06:39:54 +0200 mwai (10852)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 20.011148997 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 06:40:14 +0200 mwai (10852)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 06:40:14 +0200 mwai (10852)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 20.016762695 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Starting the New Relic agent in "development" environment.
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : New Relic Agent Developer Mode enabled.
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Environment: development
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Dispatcher: passenger
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Application: My Application (Development)
+[09/12/15 07:02:48 +0200 mwai (10806)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Net instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing deferred Rack instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Rack::Builder middleware instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing ActiveRecord instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Rails 3+ middleware instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Rails 3 Error instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Rails 3 Controller instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/12/15 07:02:49 +0200 mwai (10806)] INFO : Finished instrumentation
+[09/12/15 07:02:50 +0200 mwai (10806)] INFO : Doing deferred dependency-detection before Rack startup
+[09/12/15 07:03:14 +0200 mwai (10833)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[09/12/15 07:07:51 +0200 mwai (10833)] INFO : Starting Agent shutdown

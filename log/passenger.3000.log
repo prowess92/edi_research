@@ -4374,3 +4374,6 @@ App 10800 stdout:
 [ 2015-09-11 17:46:40.8729 10592/b67bdb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 10800, listening on unix:/tmp/passenger.1.0.10588/generation-0/backends/preloader.10800
 App 10841 stdout: 
 App 10852 stdout: 
+App 10806 stdout: 
+[ 2015-09-12 07:02:51.2765 10592/b67bdb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 10806, listening on unix:/tmp/passenger.1.0.10588/generation-0/backends/preloader.10806
+App 10833 stdout: 

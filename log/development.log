@@ -2056,3 +2056,511 @@ Rendered clients/show.html.erb within layouts/application (41.3ms)
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
 Completed 200 OK in 196ms (Views: 162.8ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-12 07:02:00 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"1", "taken_evening"=>"0", "due_date"=>"2015-11-12", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-12 07:02:00', 7, '2015-11-12', NULL, 0, 1, 30, '2015-09-12 07:02:00')
+  [1m[36m (222.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 278ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:02:00 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (15.1ms)
+Rendered clients/show.html.erb within layouts/application (42.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 209ms (Views: 155.1ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:02:33 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (16.8ms)
+Rendered clients/show.html.erb within layouts/application (43.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 194ms (Views: 162.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:02:35 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (16.4ms)
+Rendered clients/show.html.erb within layouts/application (42.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 199ms (Views: 98.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:02:36 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (17.7ms)
+Rendered clients/show.html.erb within layouts/application (45.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 195ms (Views: 96.1ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:03:01 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (36.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 188ms (Views: 90.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:04:34 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+ERROR: compiling _app_views_clients_show_html_erb___946058097_91904700 RAISED /var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ':', expecting ')'
+....id ],:order_by => 'due_date' :limit => 1)
+...                               ^
+Function body:           def _app_views_clients_show_html_erb___946058097_91904700(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "clients/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+#staff_right p{width:98%}
+</style>
+<span id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</span>
+<div id="staff_right">
+');
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if !medical.nil?
+         today = Date.today
+
+	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ],:order_by => 'due_date' :limit => 1)
+
+	if appointment.nil?
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'appointment' );@output_buffer.safe_concat('
+'); 
+	else
+
+@output_buffer.safe_concat('	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          ');@output_buffer.append= ( appointment.total_drugs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 ');@output_buffer.append= ( appointment.due_date.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+');
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'medical' );@output_buffer.safe_concat('
+');
+end
+
+@output_buffer.safe_concat('</div>
+<p>
+  <b>Arv Number:</b>
+  ');@output_buffer.append= ( @client.arv_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Date of Birth:</b>
+  ');@output_buffer.append= ( @client.dob.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Gender:</b>
+  ');@output_buffer.append= ( @client.gender );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Education:</b>
+  ');@output_buffer.append= ( @client.education );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Occupation:</b>
+  ');@output_buffer.append= ( @client.occupation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Marital status:</b>
+  ');@output_buffer.append= ( @client.marital_status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Literacy level:</b>
+  ');@output_buffer.append= ( @client.literacy_level );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Phone:</b>
+  ');@output_buffer.append= ( @client.phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !medical.nil? 
+@output_buffer.safe_concat('<p>
+  <b>Regimen:</b>
+  ');@output_buffer.append= ( regimen );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+ <b>Takes CPT:</b>
+ ');@output_buffer.append= ( cpt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `module_eval'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `compile'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:190:in `compile!'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:143:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:55:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:142:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:150:in `block in render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:73:in `block in trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer_helpers.rb:82:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:71:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:149:in `render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:99:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mwai/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/var/www/edi_research/app/controllers/clients_controller.rb:20:in `show'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:425:in `_run__652106382__process_action__167716467__callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:28:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:361:in `perform_action_with_newrelic_trace'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:27:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:121:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:193:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:236:in `block in action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:35:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:538:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/developer_mode.rb:48:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/query_cache.rb:64:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/rack/logger.rb:13:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/engine.rb:456:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/application.rb:143:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+Rendered clients/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (/var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ':', expecting ')'
+....id ],:order_by => 'due_date' :limit => 1)
+...                               ^):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ],:order_by => 'due_date' :limit => 1)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:04:57 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (78.6ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (Unknown key: order_by):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ],:order_by => 'due_date', :limit => 1)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/views/clients/show.html.erb:12:in `_app_views_clients_show_html_erb___946058097__645728208'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:04:58 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (Unknown key: order_by):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ],:order_by => 'due_date', :limit => 1)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/views/clients/show.html.erb:12:in `_app_views_clients_show_html_erb___946058097__645728208'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:04:58 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (Unknown key: order_by):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ],:order_by => 'due_date', :limit => 1)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/views/clients/show.html.erb:12:in `_app_views_clients_show_html_erb___946058097__645728208'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:06:52 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (35.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 114ms (Views: 85.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:07:18 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (40.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 125ms (Views: 91.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:07:21 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (1.2ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (41.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 122ms (Views: 91.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:08:59 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date > '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (33.5ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined method `each' for #<Appointment:0xb4e8cc40>):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 
+    12: 	 Appointment.find(:first, :conditions => [ "due_date > ? AND client_id = ?",  today, @client.id ]).each do |appointment| end
+    13: 
+    14: 	if !appointment.nil?
+    15: %>
+  app/views/clients/show.html.erb:12:in `_app_views_clients_show_html_erb___946058097__626884568'
+  app/controllers/clients_controller.rb:20:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:12:23 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/_appointment.html.erb (22.7ms)
+Rendered clients/show.html.erb within layouts/application (51.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 206ms (Views: 171.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 07:12:54 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1
+Rendered clients/_appointment.html.erb (16.5ms)
+Rendered clients/show.html.erb within layouts/application (110.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 203ms (Views: 170.0ms | ActiveRecord: 9.7ms)
