@@ -1,8 +1,8 @@
 <style>
-#staff_right p{width:98%}
+#staff_right p{width:98%;}
 </style>
 <span id="notice"><%= notice %></span>
-<div id="staff_right">
+<div id="staff_right" style="height:250;">
 <%
 medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
 
@@ -34,6 +34,17 @@ else
 	<%= render 'medical' %>
 <%
 end
+%>
+</div>
+<div id="staff_right" style="height:200;top:290;overflow:auto;">
+<h2 style="font-size:22;">Previous appointments</h2>
+<%
+	status = 'done'
+	Appointment.find(:all, :conditions => [ "status = ? AND client_id = ? ",  status, @client.id]).each do |doneApp|
+%>
+	<p><%= doneApp.due_date.to_date.to_s(:long) %></p>
+<%		
+	end
 %>
 </div>
 <p>

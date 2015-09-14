@@ -4063,3 +4063,721 @@ Rendered clients/show.html.erb within layouts/application (29.7ms)
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
 Completed 200 OK in 190ms (Views: 83.7ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:25:35 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.0ms)
+Rendered clients/show.html.erb within layouts/application (74.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 175ms (Views: 124.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:26:02 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.0ms)
+Rendered clients/show.html.erb within layouts/application (76.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 174ms (Views: 126.8ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:26:12 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.8ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (5.7ms)
+Rendered clients/show.html.erb within layouts/application (103.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 213ms (Views: 163.0ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:26:19 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.8ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (5.8ms)
+Rendered clients/show.html.erb within layouts/application (40.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 271ms (Views: 170.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:26:27 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.9ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (5.2ms)
+Rendered clients/show.html.erb within layouts/application (54.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 243ms (Views: 110.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:26:34 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.3ms)
+Rendered clients/show.html.erb within layouts/application (29.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 244ms (Views: 121.6ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:34:32 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.7ms)
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (31.9ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40: <h3>Previous appointments</h3>
+    41: <%
+    42: 	status = 'done'
+    43: 	Appointment.find(:first, :conditions => [ "status = ? AND client_id = ? ",  status, @client.id]).each do |doneApp|
+    44: %>
+    45: 	<p><%= doneApp.due_date.to_date.to_s(:long) %></p>
+    46: <%		
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__558800726__628014868'
+  app/controllers/clients_controller.rb:34:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:35:31 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (4.2ms)
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (41.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 150ms (Views: 99.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:35:54 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.4ms)
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (32.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 131.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:36:03 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.9ms)
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (30.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 192ms (Views: 132.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:36:11 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.4ms)
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (85.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 196ms (Views: 142.6ms | ActiveRecord: 12.4ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 10:36:44 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"0", "taken_evening"=>"1", "due_date"=>"2015-09-11", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 10:36:44', 7, '2015-09-11', NULL, 1, 0, 30, '2015-09-14 10:36:44')[0m
+  [1m[35m (112.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 168ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:36:45 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 10:36:45' WHERE `appointments`.`id` = 12[0m
+  [1m[35m (57.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.5ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.8ms)
+  [1m[36mAppointment Load (0.8ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (32.4ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 251ms (Views: 131.5ms | ActiveRecord: 73.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:37:54 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.0ms)
+  [1m[36mAppointment Load (0.9ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (80.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 189ms (Views: 133.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:38:11 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (2.4ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.2ms)
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (85.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 207ms (Views: 141.6ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:38:12 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (4.0ms)
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (38.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 203ms (Views: 89.9ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:38:30 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.9ms)
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (32.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 200ms (Views: 84.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:38:44 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.0ms)
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (74.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 241ms (Views: 125.3ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 10:39:00 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"0", "taken_evening"=>"1", "due_date"=>"2015-09-09", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 10:39:00', 7, '2015-09-09', NULL, 1, 0, 30, '2015-09-14 10:39:00')[0m
+  [1m[35m (483.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 577ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:39:00 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 13 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 10:39:00' WHERE `appointments`.`id` = 13
+  [1m[36m (61.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (3.1ms)
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (76.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 312ms (Views: 131.5ms | ActiveRecord: 77.1ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 10:39:12 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"3", "taken_morning"=>"1", "taken_evening"=>"1", "due_date"=>"2015-09-03", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 10:39:12', 7, '2015-09-03', NULL, 1, 1, 3, '2015-09-14 10:39:12')
+  [1m[36m (117.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 226ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:39:12 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.8ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 14 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 10:39:12' WHERE `appointments`.`id` = 14
+  [1m[36m (68.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.8ms)
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (29.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 271ms (Views: 133.7ms | ActiveRecord: 86.1ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 10:39:25 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"2", "taken_morning"=>"2", "taken_evening"=>"1", "due_date"=>"2015-09-01", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (1.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 10:39:25', 7, '2015-09-01', NULL, 1, 2, 2, '2015-09-14 10:39:25')
+  [1m[36m (184.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 300ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:39:25 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 14 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (62.2ms)[0m  [1mUPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 10:39:25' WHERE `appointments`.`id` = 15[0m
+  [1m[35m (68.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.9ms)
+  [1m[36mAppointment Load (0.9ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (85.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 344ms (Views: 138.3ms | ActiveRecord: 147.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:39:45 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 14 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 15 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.9ms)
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (31.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 218ms (Views: 83.6ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:39:52 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.9ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 13 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 15 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (3.9ms)
+  [1m[36mAppointment Load (0.8ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (33.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 231ms (Views: 94.9ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:40:39 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (16.7ms)
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (44.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 129ms (Views: 96.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:41:57 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (15.6ms)
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )[0m
+Rendered clients/show.html.erb within layouts/application (42.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 122ms (Views: 91.3ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 10:42:26 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"0", "taken_evening"=>"1", "due_date"=>"2015-09-13", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 10:42:27', 7, '2015-09-13', NULL, 1, 0, 30, '2015-09-14 10:42:27')[0m
+  [1m[35m (64.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 130ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:42:27 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 16 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 10:42:27' WHERE `appointments`.`id` = 16
+  [1m[36m (52.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.8ms)
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 191ms (Views: 82.7ms | ActiveRecord: 66.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 10:42:45 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mClientMedical Load (0.8ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (15.6ms)
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'done' AND client_id = 1 )
+Rendered clients/show.html.erb within layouts/application (42.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 122ms (Views: 90.0ms | ActiveRecord: 10.7ms)
