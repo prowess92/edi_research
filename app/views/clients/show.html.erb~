@@ -8,8 +8,8 @@ medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.i
 
 if !medical.nil?
          today = Date.today
-
-	 appointment = Appointment.find(:first, :conditions => [ "due_date < ? AND client_id = ?",  today, @client.id ], :limit => 200)
+	 status = 'pending'
+	 appointment = Appointment.find(:first, :conditions => [ "status = ? AND client_id = ? ",  status, @client.id])
 
 	if appointment.nil?
 %>

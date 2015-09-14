@@ -4377,3 +4377,322 @@ App 10852 stdout:
 App 10806 stdout: 
 [ 2015-09-12 07:02:51.2765 10592/b67bdb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 10806, listening on unix:/tmp/passenger.1.0.10588/generation-0/backends/preloader.10806
 App 10833 stdout: 
+Assertion failed! ext/common/Utils/SpeedMeter.h:172: bool Passenger::SpeedMeter<ValueType, maxSamples, minAge, maxAge, window>::addSample(ValueType, long long unsigned int) [with ValueType = long long unsigned int; unsigned int maxSamples = 8u; unsigned int minAge = 1000000u; unsigned int maxAge = 60000000u; unsigned int window = 1000000u]: lastSample.timestamp <= timestamp
+[ pid=10592, timestamp=1442070719 ] Process aborted! signo=SIGABRT(6), reason=SI_TKILL, signal sent by PID 10592 with UID 1000, si_addr=0x2960, randomSeed=1441986383
+[ pid=10592 ] Crash log dumped to /var/tmp/passenger-crash-log.1442070719
+[ pid=10592 ] Date, uname and ulimits:
+Sat Sep 12 17:11:59 CAT 2015
+Linux 3.19.0-26-generic #27-Ubuntu SMP Tue Jul 28 18:26:33 UTC 2015 i686 i686
+time(seconds)        unlimited
+file(blocks)         unlimited
+data(kbytes)         unlimited
+stack(kbytes)        8192
+coredump(blocks)     0
+memory(kbytes)       unlimited
+locked memory(kbytes) 64
+process              29478
+nofiles              1024
+vmemory(kbytes)      unlimited
+locks                unlimited
+[ pid=10592 ] Phusion Passenger version: 4.0.46
+[ pid=10592 ] Last assertion failure: (lastSample.timestamp <= timestamp), function bool Passenger::SpeedMeter<ValueType, maxSamples, minAge, maxAge, window>::addSample(ValueType, long long unsigned int) [with ValueType = long long unsigned int; unsigned int maxSamples = 8u; unsigned int minAge = 1000000u; unsigned int maxAge = 60000000u; unsigned int window = 1000000u], file ext/common/Utils/SpeedMeter.h, line 172.
+[ pid=10592 ] libc backtrace available!
+--------------------------------------
+[ pid=10592 ] Backtrace with 32 frames:
+Using backtrace sanitizer.
+PassengerHelperAgent(Passenger::dumpBacktrace(Passenger::AbortHandlerState&, void*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:553) [0x8144179]
+PassengerHelperAgent(Passenger::runInSubprocessWithTimeLimit(Passenger::AbortHandlerState&, void (*)(Passenger::AbortHandlerState&, void*), void*, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:396) [0x8143ab5]
+PassengerHelperAgent(Passenger::dumpDiagnostics(Passenger::AbortHandlerState&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:742) [0x8144d20]
+PassengerHelperAgent(Passenger::abortHandler(int, siginfo_t*, void*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:987) [0x81459d8]
+[0xb7714bc8]
+[0xb7714be0]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; gsignal+0x47) [0xb73d7057]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; abort+0x149) [0xb73d8699]
+PassengerHelperAgent(Passenger::installAbortHandler() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:1087) [0x8145c4d]
+PassengerHelperAgent(Passenger::SpeedMeter<unsigned long long, 8u, 1000000u, 60000000u, 1000000u>::addSample(unsigned long long, unsigned long long) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SpeedMeter.h:174) [0x80e3579]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::parseProcStat(Passenger::SystemMetrics&, std::string const&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:1061) [0x80aaa44]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::queryProcStat(Passenger::SystemMetrics&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:996) [0x80aa635]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::collect(Passenger::SystemMetrics&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:1448) [0x80ab014]
+PassengerHelperAgent(Passenger::ApplicationPool2::Pool::realCollectAnalytics() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/ApplicationPool2/Pool.h:881) [0x80af829]
+PassengerHelperAgent(Passenger::ApplicationPool2::Pool::collectAnalytics(boost::shared_ptr<Passenger::ApplicationPool2::Pool>) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/ApplicationPool2/Pool.h:754) [0x80ae4cd]
+PassengerHelperAgent(void boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > >::operator()<void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:253 (discriminator 1)) [0x8122e1f]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x811bfe0]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > > >, void>::invoke(boost::detail::function::function_buffer&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:154) [0x8114cb4]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:767) [0x80d7503]
+PassengerHelperAgent(oxt::dynamic_thread_group::thread_main(boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/oxt/dynamic_thread_group.hpp:109 (discriminator 1)) [0x80856e5]
+PassengerHelperAgent(boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>::operator()(oxt::dynamic_thread_group*, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/mem_fn_template.hpp:281 (discriminator 3)) [0x81268ee]
+PassengerHelperAgent(void boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> >::operator()<boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>&, boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:393) [0x811f6dc]
+PassengerHelperAgent(boost::_bi::bind_t<void, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x81188d2]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> > >, void>::invoke(boost::detail::function::function_buffer&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:154) [0x811034b]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:767) [0x80d7503]
+PassengerHelperAgent(oxt::thread::thread_main(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/oxt/implementation.cpp:357) [0x81b3f36]
+PassengerHelperAgent(void boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > >::operator()<void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:313 (discriminator 1)) [0x812f754]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x812f1a4]
+PassengerHelperAgent(boost::detail::thread_data<boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > > >::run() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/thread/detail/thread.hpp:118) [0x812e67e]
+PassengerHelperAgent(thread_proxy at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/libs/thread/src/pthread/thread.cpp:181) [0x817e27f]
+/lib/i386-linux-gnu/libpthread.so.0(?? at ??:0; +0x61aa) [0xb76d51aa]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; clone+0x5e) [0xb7494fde]
+--------------------------------------
+[ pid=10592 ] Dumping additional diagnostical information...
+--------------------------------------
+### Request handler state
+0 clients:
+
+### Pool state (simple)
+----------- General information -----------
+Max pool size : 6
+Processes     : 1
+Requests in top-level queue : 0
+
+----------- Application groups -----------
+/var/www/edi_research#default:
+  App root: /var/www/edi_research
+  Requests in queue: 0
+  * PID: 10852   Sessions: 0       Processed: 148     Uptime: 23h 25m 20s
+    CPU: 0%      Memory  : 124M    Last used: 43m 48s
+    URL     : http://127.0.0.1:35702
+    Password: nXaXd8q9BWan0jehGasv7bFVMe07CLuHRq7rzVvUege
+
+
+### Pool state (XML)
+<?xml version="1.0" encoding="iso8859-1" ?>
+<info version="3"><passenger_version>4.0.46</passenger_version><process_count>1</process_count><max>6</max><capacity_used>1</capacity_used><get_wait_list_size>0</get_wait_list_size><get_wait_list></get_wait_list><supergroups><supergroup><name>/var/www/edi_research</name><state>READY</state><get_wait_list_size>0</get_wait_list_size><capacity_used>1</capacity_used><secret>d9cwqhJJbtVCKOMfrt9jKgrciOJ22Txc704NnNE80FN</secret><group default="true"><name>/var/www/edi_research&#35;default</name><component_name>default</component_name><app_root>/var/www/edi_research</app_root><app_type>rack</app_type><environment>development</environment><enabled_process_count>1</enabled_process_count><disabling_process_count>0</disabling_process_count><disabled_process_count>0</disabled_process_count><capacity_used>1</capacity_used><get_wait_list_size>0</get_wait_list_size><disable_wait_list_size>0</disable_wait_list_size><processes_being_spawned>0</processes_being_spawned><secret>ezahq8jPa4jlIxtUyxFo0lxfuipKPJDwdpFTow1AeLD</secret><life_status>ALIVE</life_status><options><app_root>/var/www/edi_research</app_root><app_group_name>/var/www/edi_research</app_group_name><app_type>rack</app_type><start_command>/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby&#9;/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/helper-scripts/rack-loader.rb</start_command><startup_file>config.ru</startup_file><process_title>Passenger RackApp</process_title><log_level>0</log_level><start_timeout>90000</start_timeout><environment>development</environment><base_uri>/</base_uri><spawn_method>smart</spawn_method><user>mwai</user><default_user>mwai</default_user><default_group>mwai</default_group><ruby>/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby</ruby><python>python</python><nodejs>node</nodejs><logging_agent_address>unix:/tmp/passenger.1.0.10588/generation-0/logging</logging_agent_address><logging_agent_username>logging</logging_agent_username><logging_agent_password>5QiKWkAGHcJQeifHjkhxGLqNawLbCHigHGlS2M5ce5V4AmVdHfd1WlOStQKwdF3P</logging_agent_password><debugger>false</debugger><analytics>false</analytics><group_secret>ezahq8jPa4jlIxtUyxFo0lxfuipKPJDwdpFTow1AeLD</group_secret><min_processes>1</min_processes><max_processes>0</max_processes><max_preloader_idle_time>-1</max_preloader_idle_time><max_out_of_band_work_instances>1</max_out_of_band_work_instances></options><processes><process><pid>10852</pid><sticky_session_id>1293717379</sticky_session_id><gupid>16eb752-o6xh57qhzLu</gupid><connect_password>nXaXd8q9BWan0jehGasv7bFVMe07CLuHRq7rzVvUege</connect_password><concurrency>1</concurrency><sessions>0</sessions><busyness>0</busyness><processed>148</processed><spawner_creation_time>1441986385746863</spawner_creation_time><spawn_start_time>1441986401018123</spawn_start_time><spawn_end_time>1441986401046652</spawn_end_time><last_used>1442068093476209</last_used><last_used_desc>43m 48s ago</last_used_desc><uptime>23h 25m 20s</uptime><life_status>ALIVE</life_status><enabled>ENABLED</enabled><has_metrics>true</has_metrics><cpu>0</cpu><rss>134156</rss><pss>128949</pss><private_dirty>127160</private_dirty><swap>0</swap><real_memory>127160</real_memory><vmsize>152980</vmsize><process_group_id>10592</process_group_id><command>Passenger RackApp: /var/www/edi_research</command><sockets><socket><name>main</name><address>unix:/tmp/passenger.1.0.10588/generation-0/backends/ruby.o57KMeWGETpSyLRwSRSQyhkz3rmSgkhZ1iioT3VAs5GHj8</address><protocol>session</protocol><concurrency>1</concurrency><sessions>0</sessions></socket><socket><name>http</name><address>tcp://127.0.0.1:35702</address><protocol>http</protocol><concurrency>1</concurrency><sessions>0</sessions></socket></sockets></process></processes></group></supergroup></supergroups></info>
+
+### Backtraces
+Thread 'Main thread' (0xb73a9700, LWP 10592):
+     in 'void Server::mainLoop()' (Main.cpp:570)
+
+Thread 'MultiLibeio dispatcher' (0xb770fb40, LWP 10592):
+     (empty)
+
+Thread 'Pool analytics collector' (0xb73a7b40, LWP 10592):
+     in 'long long unsigned int Passenger::ApplicationPool2::Pool::realCollectAnalytics()' (Pool.h:873)
+     in 'static void Passenger::ApplicationPool2::Pool::collectAnalytics(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:753)
+
+Thread 'Pool garbage collector' (0xb7366b40, LWP 10592):
+     in 'static void Passenger::ApplicationPool2::Pool::garbageCollect(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:621)
+
+Thread 'MessageServer thread' (0xb7325b40, LWP 10592):
+     in 'void Passenger::MessageServer::mainLoop()' (MessageServer.h:580)
+
+Thread 'Pool event loop' (0xb63ffb40, LWP 10592):
+     (empty)
+
+Thread 'Request event loop' (0xb5bfeb40, LWP 10592):
+     (empty)
+
+Thread 'PipeWatcher: PID 10800 stderr, fd 23' (0xb53fdb40, LWP 10799):
+     in 'void Passenger::ApplicationPool2::PipeWatcher::threadMain()' (Implementation.cpp:1509)
+     in 'static void Passenger::ApplicationPool2::PipeWatcher::threadMain(boost::shared_ptr<Passenger::ApplicationPool2::PipeWatcher>)' (Implementation.cpp:1490)
+
+Thread 'PipeWatcher: PID 10852 stdout, fd 25' (0xb5357b40, LWP 10799):
+     in 'void Passenger::ApplicationPool2::PipeWatcher::threadMain()' (Implementation.cpp:1509)
+     in 'static void Passenger::ApplicationPool2::PipeWatcher::threadMain(boost::shared_ptr<Passenger::ApplicationPool2::PipeWatcher>)' (Implementation.cpp:1490)
+
+--------------------------------------
+[ pid=10592 ] Open files and file descriptors:
+COMMAND     PID USER   FD   TYPE     DEVICE SIZE/OFF     NODE NAME
+Passenger 10592 mwai  cwd    DIR        8,1     4096   565657 /var/www/edi_research
+Passenger 10592 mwai  rtd    DIR        8,1     4096        2 /
+Passenger 10592 mwai  txt    REG        8,1 13476350 10092619 /home/mwai/.passenger/standalone/4.0.46/support-x86-linux/agents/PassengerHelperAgent
+Passenger 10592 mwai  mem    REG        8,1    50860     1404 /lib/i386-linux-gnu/libnss_files-2.21.so
+Passenger 10592 mwai  mem    REG        8,1    46716     1408 /lib/i386-linux-gnu/libnss_nis-2.21.so
+Passenger 10592 mwai  mem    REG        8,1    96084     1410 /lib/i386-linux-gnu/libnsl-2.21.so
+Passenger 10592 mwai  mem    REG        8,1  1807496     1413 /lib/i386-linux-gnu/libc-2.21.so
+Passenger 10592 mwai  mem    REG        8,1   112708       48 /lib/i386-linux-gnu/libgcc_s.so.1
+Passenger 10592 mwai  mem    REG        8,1   309156     1414 /lib/i386-linux-gnu/libm-2.21.so
+Passenger 10592 mwai  mem    REG        8,1   975668  3408000 /usr/lib/i386-linux-gnu/libstdc++.so.6.0.20
+Passenger 10592 mwai  mem    REG        8,1    30828     1417 /lib/i386-linux-gnu/librt-2.21.so
+Passenger 10592 mwai  mem    REG        8,1   137044     1398 /lib/i386-linux-gnu/libpthread-2.21.so
+Passenger 10592 mwai  mem    REG        8,1    34704     1406 /lib/i386-linux-gnu/libnss_compat-2.21.so
+Passenger 10592 mwai  mem    REG        8,1   143792     1409 /lib/i386-linux-gnu/ld-2.21.so
+Passenger 10592 mwai    0r   CHR        1,3      0t0     8069 /dev/null
+Passenger 10592 mwai    1w  FIFO        0,9      0t0   776941 pipe
+Passenger 10592 mwai    2w  FIFO        0,9      0t0   776941 pipe
+Passenger 10592 mwai    3u  unix 0x00000000      0t0   111198 socket
+Passenger 10592 mwai    5w  FIFO        0,9      0t0   776941 pipe
+Passenger 10592 mwai    8u  0000       0,10        0     8022 anon_inode
+Passenger 10592 mwai    9u  0000       0,10        0     8022 anon_inode
+Passenger 10592 mwai   10u  0000       0,10        0     8022 anon_inode
+Passenger 10592 mwai   11u  0000       0,10        0     8022 anon_inode
+Passenger 10592 mwai   12u  0000       0,10        0     8022 anon_inode
+Passenger 10592 mwai   13r  FIFO        0,9      0t0   111201 pipe
+Passenger 10592 mwai   14w  FIFO        0,9      0t0   111201 pipe
+Passenger 10592 mwai   15u  unix 0x00000000      0t0   111202 /tmp/passenger.1.0.10588/generation-0/request
+Passenger 10592 mwai   16u  unix 0x00000000      0t0   111203 /tmp/passenger.1.0.10588/generation-0/helper_admin
+Passenger 10592 mwai   17r   CHR        1,9      0t0     8074 /dev/urandom
+Passenger 10592 mwai   18r   CHR        1,9      0t0     8074 /dev/urandom
+Passenger 10592 mwai   23r  FIFO        0,9      0t0   111428 pipe
+Passenger 10592 mwai   25u  unix 0x00000000      0t0   112277 socket
+Passenger 10592 mwai   27u  unix 0x00000000      0t0   661645 socket
+--------------------------------------
+[ pid=10592 ] Dumping a more detailed backtrace with crash-watch...
+Crash-watch is not installed. Please install it with 'gem install crash-watch' or download it from https://github.com/FooBarWidget/crash-watch.
+[ 2015-09-12 17:12:02.0728 10589/b73cfb40 agents/Watchdog/AgentWatcher.cpp:96 ]: Phusion Passenger helper agent (pid=10592) crashed with signal SIGABRT, restarting it...
+[ 2015-09-12 17:12:02.1719 18429/b746c700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.10588/generation-0/request
+App 18444 stdout: 
+[ 2015-09-12 17:12:18.5415 18429/b727db40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 18444, listening on unix:/tmp/passenger.1.0.10588/generation-0/backends/preloader.18444
+App 18466 stdout: 
+Assertion failed! ext/common/Utils/SpeedMeter.h:172: bool Passenger::SpeedMeter<ValueType, maxSamples, minAge, maxAge, window>::addSample(ValueType, long long unsigned int) [with ValueType = long long unsigned int; unsigned int maxSamples = 8u; unsigned int minAge = 1000000u; unsigned int maxAge = 60000000u; unsigned int window = 1000000u]: lastSample.timestamp <= timestamp
+[ pid=18429, timestamp=1442071614 ] Process aborted! signo=SIGABRT(6), reason=SI_TKILL, signal sent by PID 18429 with UID 1000, si_addr=0x47ec, randomSeed=1442070722
+[ pid=18429 ] Crash log dumped to /var/tmp/passenger-crash-log.1442071614
+[ pid=18429 ] Date, uname and ulimits:
+Sat Sep 12 17:26:54 CAT 2015
+Linux 3.19.0-26-generic #27-Ubuntu SMP Tue Jul 28 18:26:33 UTC 2015 i686 i686
+time(seconds)        unlimited
+file(blocks)         unlimited
+data(kbytes)         unlimited
+stack(kbytes)        8192
+coredump(blocks)     0
+memory(kbytes)       unlimited
+locked memory(kbytes) 64
+process              29478
+nofiles              1024
+vmemory(kbytes)      unlimited
+locks                unlimited
+[ pid=18429 ] Phusion Passenger version: 4.0.46
+[ pid=18429 ] Last assertion failure: (lastSample.timestamp <= timestamp), function bool Passenger::SpeedMeter<ValueType, maxSamples, minAge, maxAge, window>::addSample(ValueType, long long unsigned int) [with ValueType = long long unsigned int; unsigned int maxSamples = 8u; unsigned int minAge = 1000000u; unsigned int maxAge = 60000000u; unsigned int window = 1000000u], file ext/common/Utils/SpeedMeter.h, line 172.
+[ pid=18429 ] libc backtrace available!
+--------------------------------------
+[ pid=18429 ] Backtrace with 32 frames:
+Using backtrace sanitizer.
+PassengerHelperAgent(Passenger::dumpBacktrace(Passenger::AbortHandlerState&, void*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:553) [0x8144179]
+PassengerHelperAgent(Passenger::runInSubprocessWithTimeLimit(Passenger::AbortHandlerState&, void (*)(Passenger::AbortHandlerState&, void*), void*, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:396) [0x8143ab5]
+PassengerHelperAgent(Passenger::dumpDiagnostics(Passenger::AbortHandlerState&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:742) [0x8144d20]
+PassengerHelperAgent(Passenger::abortHandler(int, siginfo_t*, void*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:987) [0x81459d8]
+[0xb77d7bc8]
+[0xb77d7be0]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; gsignal+0x47) [0xb749a057]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; abort+0x149) [0xb749b699]
+PassengerHelperAgent(Passenger::installAbortHandler() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/agents/Base.cpp:1087) [0x8145c4d]
+PassengerHelperAgent(Passenger::SpeedMeter<unsigned long long, 8u, 1000000u, 60000000u, 1000000u>::addSample(unsigned long long, unsigned long long) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SpeedMeter.h:174) [0x80e3579]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::parseProcStat(Passenger::SystemMetrics&, std::string const&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:1061) [0x80aaa44]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::queryProcStat(Passenger::SystemMetrics&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:996) [0x80aa635]
+PassengerHelperAgent(Passenger::SystemMetricsCollector::collect(Passenger::SystemMetrics&) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/Utils/SystemMetricsCollector.h:1448) [0x80ab014]
+PassengerHelperAgent(Passenger::ApplicationPool2::Pool::realCollectAnalytics() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/ApplicationPool2/Pool.h:881) [0x80af829]
+PassengerHelperAgent(Passenger::ApplicationPool2::Pool::collectAnalytics(boost::shared_ptr<Passenger::ApplicationPool2::Pool>) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/common/ApplicationPool2/Pool.h:754) [0x80ae4cd]
+PassengerHelperAgent(void boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > >::operator()<void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:253 (discriminator 1)) [0x8122e1f]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x811bfe0]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, void (*)(boost::shared_ptr<Passenger::ApplicationPool2::Pool>), boost::_bi::list1<boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Pool> > > >, void>::invoke(boost::detail::function::function_buffer&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:154) [0x8114cb4]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:767) [0x80d7503]
+PassengerHelperAgent(oxt::dynamic_thread_group::thread_main(boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/oxt/dynamic_thread_group.hpp:109 (discriminator 1)) [0x80856e5]
+PassengerHelperAgent(boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>::operator()(oxt::dynamic_thread_group*, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*) const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/mem_fn_template.hpp:281 (discriminator 3)) [0x81268ee]
+PassengerHelperAgent(void boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> >::operator()<boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>&, boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:393) [0x811f6dc]
+PassengerHelperAgent(boost::_bi::bind_t<void, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x81188d2]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, boost::_mfi::mf2<void, oxt::dynamic_thread_group, boost::function<void ()>&, oxt::dynamic_thread_group::thread_handle*>, boost::_bi::list3<boost::_bi::value<oxt::dynamic_thread_group*>, boost::_bi::value<boost::function<void ()> >, boost::_bi::value<oxt::dynamic_thread_group::thread_handle*> > >, void>::invoke(boost::detail::function::function_buffer&) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:154) [0x811034b]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/function/function_template.hpp:767) [0x80d7503]
+PassengerHelperAgent(oxt::thread::thread_main(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/oxt/implementation.cpp:357) [0x81b3f36]
+PassengerHelperAgent(void boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > >::operator()<void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0&, int) at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind.hpp:313 (discriminator 1)) [0x812f754]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > >::operator()() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/bind/bind_template.hpp:21) [0x812f1a4]
+PassengerHelperAgent(boost::detail::thread_data<boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > > >::run() at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/thread/detail/thread.hpp:118) [0x812e67e]
+PassengerHelperAgent(thread_proxy at /home/mwai/.rvm/gems/ruby-1.8.7-p374/gems/passenger-4.0.46/ext/boost/libs/thread/src/pthread/thread.cpp:181) [0x817e27f]
+/lib/i386-linux-gnu/libpthread.so.0(?? at ??:0; +0x61aa) [0xb77981aa]
+/lib/i386-linux-gnu/libc.so.6(?? at ??:0; clone+0x5e) [0xb7557fde]
+--------------------------------------
+[ pid=18429 ] Dumping additional diagnostical information...
+--------------------------------------
+### Request handler state
+0 clients:
+
+### Pool state (simple)
+----------- General information -----------
+Max pool size : 6
+Processes     : 1
+Requests in top-level queue : 0
+
+----------- Application groups -----------
+/var/www/edi_research#default:
+  App root: /var/www/edi_research
+  Requests in queue: 0
+  * PID: 18466   Sessions: 0       Processed: 1       Uptime: 14m 37s
+    CPU: 0%      Memory  : 49M     Last used: 14m 37s ago
+    URL     : http://127.0.0.1:41503
+    Password: uaoiUlZo8VfE5Mmj4fvO9HoZW91Ie5rO8gfVyohEzJH
+
+
+### Pool state (XML)
+<?xml version="1.0" encoding="iso8859-1" ?>
+<info version="3"><passenger_version>4.0.46</passenger_version><process_count>1</process_count><max>6</max><capacity_used>1</capacity_used><get_wait_list_size>0</get_wait_list_size><get_wait_list></get_wait_list><supergroups><supergroup><name>/var/www/edi_research</name><state>READY</state><get_wait_list_size>0</get_wait_list_size><capacity_used>1</capacity_used><secret>aUE9Dj8nsXf9SDZm4TtFPpSujZpKvf9I31Une5vhqF5</secret><group default="true"><name>/var/www/edi_research&#35;default</name><component_name>default</component_name><app_root>/var/www/edi_research</app_root><app_type>rack</app_type><environment>development</environment><enabled_process_count>1</enabled_process_count><disabling_process_count>0</disabling_process_count><disabled_process_count>0</disabled_process_count><capacity_used>1</capacity_used><get_wait_list_size>0</get_wait_list_size><disable_wait_list_size>0</disable_wait_list_size><processes_being_spawned>0</processes_being_spawned><secret>y2onXv91YOqvn15HDosRZ0LNkqdV7tfdCdgIiyOYsXd</secret><life_status>ALIVE</life_status><options><app_root>/var/www/edi_research</app_root><app_group_name>/var/www/edi_research</app_group_name><app_type>rack</app_type><start_command>/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby&#9;/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/helper-scripts/rack-loader.rb</start_command><startup_file>config.ru</startup_file><process_title>Passenger RackApp</process_title><log_level>0</log_level><start_timeout>90000</start_timeout><environment>development</environment><base_uri>/</base_uri><spawn_method>smart</spawn_method><user>mwai</user><default_user>mwai</default_user><default_group>mwai</default_group><ruby>/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby</ruby><python>python</python><nodejs>node</nodejs><logging_agent_address>unix:/tmp/passenger.1.0.10588/generation-0/logging</logging_agent_address><logging_agent_username>logging</logging_agent_username><logging_agent_password>5QiKWkAGHcJQeifHjkhxGLqNawLbCHigHGlS2M5ce5V4AmVdHfd1WlOStQKwdF3P</logging_agent_password><debugger>false</debugger><analytics>false</analytics><group_secret>y2onXv91YOqvn15HDosRZ0LNkqdV7tfdCdgIiyOYsXd</group_secret><min_processes>1</min_processes><max_processes>0</max_processes><max_preloader_idle_time>-1</max_preloader_idle_time><max_out_of_band_work_instances>1</max_out_of_band_work_instances></options><processes><process><pid>18466</pid><sticky_session_id>816165591</sticky_session_id><gupid>16ebcd0-LCC7bbTxCMT</gupid><connect_password>uaoiUlZo8VfE5Mmj4fvO9HoZW91Ie5rO8gfVyohEzJH</connect_password><concurrency>1</concurrency><sessions>0</sessions><busyness>0</busyness><processed>1</processed><spawner_creation_time>1442070724782505</spawner_creation_time><spawn_start_time>1442070738650769</spawn_start_time><spawn_end_time>1442070738683330</spawn_end_time><last_used>1442070738683396</last_used><last_used_desc>14m 37s ago</last_used_desc><uptime>14m 37s</uptime><life_status>ALIVE</life_status><enabled>ENABLED</enabled><has_metrics>true</has_metrics><cpu>0</cpu><rss>57492</rss><pss>52471</pss><private_dirty>50312</private_dirty><swap>0</swap><real_memory>50312</real_memory><vmsize>76120</vmsize><process_group_id>18429</process_group_id><command>Passenger RackApp: /var/www/edi_research</command><sockets><socket><name>main</name><address>unix:/tmp/passenger.1.0.10588/generation-0/backends/ruby.1OCNarFYURx5ebI6quI6Hdulwyxt96XYrCoY2QfONK7ld0</address><protocol>session</protocol><concurrency>1</concurrency><sessions>0</sessions></socket><socket><name>http</name><address>tcp://127.0.0.1:41503</address><protocol>http</protocol><concurrency>1</concurrency><sessions>0</sessions></socket></sockets></process></processes></group></supergroup></supergroups></info>
+
+### Backtraces
+Thread 'Main thread' (0xb746c700, LWP 18429):
+     in 'void Server::mainLoop()' (Main.cpp:570)
+
+Thread 'MultiLibeio dispatcher' (0xb77d2b40, LWP 18429):
+     (empty)
+
+Thread 'Pool analytics collector' (0xb746ab40, LWP 18429):
+     in 'long long unsigned int Passenger::ApplicationPool2::Pool::realCollectAnalytics()' (Pool.h:873)
+     in 'static void Passenger::ApplicationPool2::Pool::collectAnalytics(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:753)
+
+Thread 'Pool garbage collector' (0xb72ffb40, LWP 18429):
+     in 'static void Passenger::ApplicationPool2::Pool::garbageCollect(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:621)
+
+Thread 'MessageServer thread' (0xb7429b40, LWP 18429):
+     in 'void Passenger::MessageServer::mainLoop()' (MessageServer.h:580)
+
+Thread 'Pool event loop' (0xb63ffb40, LWP 18429):
+     (empty)
+
+Thread 'Request event loop' (0xb5bfeb40, LWP 18429):
+     (empty)
+
+Thread 'PipeWatcher: PID 18444 stderr, fd 23' (0xb67d5b40, LWP 18443):
+     in 'void Passenger::ApplicationPool2::PipeWatcher::threadMain()' (Implementation.cpp:1509)
+     in 'static void Passenger::ApplicationPool2::PipeWatcher::threadMain(boost::shared_ptr<Passenger::ApplicationPool2::PipeWatcher>)' (Implementation.cpp:1490)
+
+Thread 'PipeWatcher: PID 18466 stdout, fd 21' (0xb6770b40, LWP 18443):
+     in 'void Passenger::ApplicationPool2::PipeWatcher::threadMain()' (Implementation.cpp:1509)
+     in 'static void Passenger::ApplicationPool2::PipeWatcher::threadMain(boost::shared_ptr<Passenger::ApplicationPool2::PipeWatcher>)' (Implementation.cpp:1490)
+
+--------------------------------------
+[ pid=18429 ] Open files and file descriptors:
+COMMAND     PID USER   FD   TYPE     DEVICE SIZE/OFF     NODE NAME
+Passenger 18429 mwai  cwd    DIR        8,1     4096   565657 /var/www/edi_research
+Passenger 18429 mwai  rtd    DIR        8,1     4096        2 /
+Passenger 18429 mwai  txt    REG        8,1 13476350 10092619 /home/mwai/.passenger/standalone/4.0.46/support-x86-linux/agents/PassengerHelperAgent
+Passenger 18429 mwai  mem    REG        8,1    50860     1404 /lib/i386-linux-gnu/libnss_files-2.21.so
+Passenger 18429 mwai  mem    REG        8,1    96084     1410 /lib/i386-linux-gnu/libnsl-2.21.so
+Passenger 18429 mwai  mem    REG        8,1    46716     1408 /lib/i386-linux-gnu/libnss_nis-2.21.so
+Passenger 18429 mwai  mem    REG        8,1  1807496     1413 /lib/i386-linux-gnu/libc-2.21.so
+Passenger 18429 mwai  mem    REG        8,1   112708       48 /lib/i386-linux-gnu/libgcc_s.so.1
+Passenger 18429 mwai  mem    REG        8,1   309156     1414 /lib/i386-linux-gnu/libm-2.21.so
+Passenger 18429 mwai  mem    REG        8,1   975668  3408000 /usr/lib/i386-linux-gnu/libstdc++.so.6.0.20
+Passenger 18429 mwai  mem    REG        8,1    30828     1417 /lib/i386-linux-gnu/librt-2.21.so
+Passenger 18429 mwai  mem    REG        8,1   137044     1398 /lib/i386-linux-gnu/libpthread-2.21.so
+Passenger 18429 mwai  mem    REG        8,1    34704     1406 /lib/i386-linux-gnu/libnss_compat-2.21.so
+Passenger 18429 mwai  mem    REG        8,1   143792     1409 /lib/i386-linux-gnu/ld-2.21.so
+Passenger 18429 mwai    0r   CHR        1,3      0t0     8069 /dev/null
+Passenger 18429 mwai    1w  FIFO        0,9      0t0   793159 pipe
+Passenger 18429 mwai    2w  FIFO        0,9      0t0   793159 pipe
+Passenger 18429 mwai    3u  unix 0x00000000      0t0   774988 socket
+Passenger 18429 mwai    5w  FIFO        0,9      0t0   793159 pipe
+Passenger 18429 mwai    8u  0000       0,10        0     8022 anon_inode
+Passenger 18429 mwai    9u  0000       0,10        0     8022 anon_inode
+Passenger 18429 mwai   10u  0000       0,10        0     8022 anon_inode
+Passenger 18429 mwai   11u  0000       0,10        0     8022 anon_inode
+Passenger 18429 mwai   12u  0000       0,10        0     8022 anon_inode
+Passenger 18429 mwai   13r  FIFO        0,9      0t0   777718 pipe
+Passenger 18429 mwai   14w  FIFO        0,9      0t0   777718 pipe
+Passenger 18429 mwai   15u  unix 0x00000000      0t0   777719 /tmp/passenger.1.0.10588/generation-0/request
+Passenger 18429 mwai   16u  unix 0x00000000      0t0   777034 /tmp/passenger.1.0.10588/generation-0/helper_admin
+Passenger 18429 mwai   17r   CHR        1,9      0t0     8074 /dev/urandom
+Passenger 18429 mwai   18r   CHR        1,9      0t0     8074 /dev/urandom
+Passenger 18429 mwai   21u  unix 0x00000000      0t0   777812 socket
+Passenger 18429 mwai   22u  unix 0x00000000      0t0   777741 socket
+Passenger 18429 mwai   23r  FIFO        0,9      0t0   777742 pipe
+--------------------------------------
+[ pid=18429 ] Dumping a more detailed backtrace with crash-watch...
+Crash-watch is not installed. Please install it with 'gem install crash-watch' or download it from https://github.com/FooBarWidget/crash-watch.
+[ 2015-09-12 17:26:55.8386 10589/b73cfb40 agents/Watchdog/AgentWatcher.cpp:96 ]: Phusion Passenger helper agent (pid=18429) crashed with signal SIGABRT, restarting it...
+[ 2015-09-12 17:26:55.8455 19776/b739b700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.10588/generation-0/request
+App 19791 stdout: 
+[ 2015-09-12 17:27:04.7315 19776/b5f9bb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 19791, listening on unix:/tmp/passenger.1.0.10588/generation-0/backends/preloader.19791
+App 19809 stdout: 
+[ 2015-09-14 09:36:07.8386 17663/b73cf700 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xOGR3ZmZmL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.18dwfff/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '17662', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-09-14 09:36:07.9375 17666/b7451700 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.17662/generation-0/request
+[ 2015-09-14 09:36:08.3535 17673/b67e2700 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.17662/generation-0/logging
+[ 2015-09-14 09:36:08.3539 17663/b73cf700 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 17703 stdout: 
+[ 2015-09-14 09:36:24.1119 17666/b725cb40 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 17703, listening on unix:/tmp/passenger.1.0.17662/generation-0/backends/preloader.17703
+App 17723 stdout: 

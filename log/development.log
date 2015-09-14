@@ -2564,3 +2564,1502 @@ Rendered clients/show.html.erb within layouts/application (110.1ms)
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
 Completed 200 OK in 203ms (Views: 170.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 16:28:10 +0200
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Rendered dashboard/index.html.erb within layouts/dashboard (14.1ms)
+Completed 200 OK in 106ms (Views: 91.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2015-09-12 16:28:10 +0200
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-09-12 16:28:11 +0200
+  Processing by ClientsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT `clients`.* FROM `clients` [0m
+Rendered clients/index.html.erb within layouts/application (19.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 244ms (Views: 161.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-12 16:28:13 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-12' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (19.5ms)
+Rendered clients/show.html.erb within layouts/application (111.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 236ms (Views: 164.5ms | ActiveRecord: 8.9ms)
+
+
+Started HEAD "/" for 127.0.0.1 at 2015-09-12 17:12:18 +0200
+  Processing by DashboardController#index as HTML
+Redirected to http://0.0.0.0/sessions/new
+Completed 302 Found in 46ms
+
+
+Started HEAD "/" for 127.0.0.1 at 2015-09-12 17:27:04 +0200
+  Processing by DashboardController#index as HTML
+Redirected to http://0.0.0.0/sessions/new
+Completed 302 Found in 15ms
+
+
+Started HEAD "/" for 127.0.0.1 at 2015-09-14 09:36:24 +0200
+  Processing by DashboardController#index as HTML
+Redirected to http://0.0.0.0/sessions/new
+Completed 302 Found in 27ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 09:36:29 +0200
+  Processing by DashboardController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 6ms
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-09-14 09:36:29 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/sessions (38.2ms)
+Completed 200 OK in 371ms (Views: 370.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-09-14 09:36:46 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M6aIWNn5Enu/CCvNJG4Hv+q33OdYec61hk0YjkEgrUY=", "email"=>"mwmtingwi5@gmail.com", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'mwmtingwi5@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/?id=7
+Completed 302 Found in 85ms
+
+
+Started GET "/?id=7" for 127.0.0.1 at 2015-09-14 09:36:46 +0200
+  Processing by DashboardController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Rendered dashboard/index.html.erb within layouts/dashboard (11.6ms)
+Completed 200 OK in 140ms (Views: 126.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2015-09-14 09:36:47 +0200
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/?id=7" for 127.0.0.1 at 2015-09-14 09:36:55 +0200
+  Processing by DashboardController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Rendered dashboard/index.html.erb within layouts/dashboard (10.9ms)
+Completed 200 OK in 39ms (Views: 25.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2015-09-14 09:36:55 +0200
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 09:37:08 +0200
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Rendered dashboard/index.html.erb within layouts/dashboard (10.7ms)
+Completed 200 OK in 41ms (Views: 26.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2015-09-14 09:37:08 +0200
+Served asset /defaults.js - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-09-14 09:37:12 +0200
+  Processing by ClientsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` 
+Rendered clients/index.html.erb within layouts/application (14.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 276ms (Views: 259.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:37:25 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+ERROR: compiling _app_views_clients_show_html_erb__558800726_89404330 RAISED /var/www/edi_research/app/views/clients/show.html.erb:32: syntax error, unexpected keyword_else, expecting keyword_end
+/var/www/edi_research/app/views/clients/show.html.erb:89: syntax error, unexpected keyword_ensure, expecting keyword_end
+/var/www/edi_research/app/views/clients/show.html.erb:91: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_clients_show_html_erb__558800726_89404330(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "clients/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+#staff_right p{width:98%}
+</style>
+<span id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</span>
+<div id="staff_right">
+');
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if !medical.nil?
+         today = Date.today
+
+	 @appointments.each do |appointment|
+
+	if appointment.nil?
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'appointment' );@output_buffer.safe_concat('
+'); 
+	else
+
+@output_buffer.safe_concat('	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          ');@output_buffer.append= ( appointment.total_drugs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 ');@output_buffer.append= ( appointment.due_date.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+');
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'medical' );@output_buffer.safe_concat('
+');
+end
+
+@output_buffer.safe_concat('</div>
+<p>
+  <b>Arv Number:</b>
+  ');@output_buffer.append= ( @client.arv_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Date of Birth:</b>
+  ');@output_buffer.append= ( @client.dob.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Gender:</b>
+  ');@output_buffer.append= ( @client.gender );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Education:</b>
+  ');@output_buffer.append= ( @client.education );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Occupation:</b>
+  ');@output_buffer.append= ( @client.occupation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Marital status:</b>
+  ');@output_buffer.append= ( @client.marital_status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Literacy level:</b>
+  ');@output_buffer.append= ( @client.literacy_level );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Phone:</b>
+  ');@output_buffer.append= ( @client.phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !medical.nil? 
+@output_buffer.safe_concat('<p>
+  <b>Regimen:</b>
+  ');@output_buffer.append= ( regimen );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+ <b>Takes CPT:</b>
+ ');@output_buffer.append= ( cpt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `module_eval'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `compile'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:190:in `compile!'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:143:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:55:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:142:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:150:in `block in render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:73:in `block in trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer_helpers.rb:82:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:71:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:149:in `render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:99:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mwai/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/var/www/edi_research/app/controllers/clients_controller.rb:30:in `show'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:425:in `_run__68865757__process_action__296144752__callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:28:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:361:in `perform_action_with_newrelic_trace'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:27:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:121:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:193:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:236:in `block in action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:35:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:538:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/developer_mode.rb:48:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/query_cache.rb:64:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/rack/logger.rb:13:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/engine.rb:456:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/application.rb:143:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+Rendered clients/show.html.erb within layouts/application (34.9ms)
+Completed 500 Internal Server Error in 186ms
+
+ActionView::Template::Error (/var/www/edi_research/app/views/clients/show.html.erb:32: syntax error, unexpected keyword_else, expecting keyword_end
+/var/www/edi_research/app/views/clients/show.html.erb:89: syntax error, unexpected keyword_ensure, expecting keyword_end
+/var/www/edi_research/app/views/clients/show.html.erb:91: syntax error, unexpected $end, expecting keyword_end):
+    29: 	end
+    30:         regimen = medical.regimen
+    31:         cpt = medical.sulphur_allegy
+    32: else
+    33: %>
+    34: 	<%= render 'medical' %>
+    35: <%
+  app/controllers/clients_controller.rb:30:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:41:27 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-14' AND client_id = 1) LIMIT 1
+Rendered clients/_appointment.html.erb (6.1ms)
+Rendered clients/show.html.erb within layouts/application (32.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 169ms (Views: 122.5ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:43:30 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mClientMedical Load (0.5ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-14' AND client_id = 1) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (3.2ms)
+Rendered clients/show.html.erb within layouts/application (69.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 164ms (Views: 122.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:44:22 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 09:44:22' WHERE `appointments`.`id` = 7[0m
+  [1m[35m (84.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (due_date < '2015-09-14' AND client_id = 1) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (67.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 344ms (Views: 119.5ms | ActiveRecord: 97.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:49:15 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `appointments` SET `status` = 'pending', `updated_at` = '2015-09-14 09:49:15' WHERE `appointments`.`id` = 8[0m
+  [1m[35m (123.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+ERROR: compiling _app_views_clients_show_html_erb__558800726_95547110 RAISED /var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'
+Function body:           def _app_views_clients_show_html_erb__558800726_95547110(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "clients/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+#staff_right p{width:98%}
+</style>
+<span id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</span>
+<div id="staff_right">
+');
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if !medical.nil?
+         today = Date.today
+	 status = 'done'
+	 appointment = Appointment.find(:first, :conditions => [ "status != ? ",  status)
+
+	if appointment.nil?
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'appointment' );@output_buffer.safe_concat('
+'); 
+	else
+
+@output_buffer.safe_concat('	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          ');@output_buffer.append= ( appointment.total_drugs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 ');@output_buffer.append= ( appointment.due_date.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+');
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'medical' );@output_buffer.safe_concat('
+');
+end
+
+@output_buffer.safe_concat('</div>
+<p>
+  <b>Arv Number:</b>
+  ');@output_buffer.append= ( @client.arv_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Date of Birth:</b>
+  ');@output_buffer.append= ( @client.dob.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Gender:</b>
+  ');@output_buffer.append= ( @client.gender );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Education:</b>
+  ');@output_buffer.append= ( @client.education );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Occupation:</b>
+  ');@output_buffer.append= ( @client.occupation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Marital status:</b>
+  ');@output_buffer.append= ( @client.marital_status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Literacy level:</b>
+  ');@output_buffer.append= ( @client.literacy_level );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Phone:</b>
+  ');@output_buffer.append= ( @client.phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !medical.nil? 
+@output_buffer.safe_concat('<p>
+  <b>Regimen:</b>
+  ');@output_buffer.append= ( regimen );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+ <b>Takes CPT:</b>
+ ');@output_buffer.append= ( cpt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `module_eval'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `compile'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:190:in `compile!'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:143:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:55:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:142:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:150:in `block in render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:73:in `block in trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer_helpers.rb:82:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:71:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:149:in `render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:99:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mwai/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/var/www/edi_research/app/controllers/clients_controller.rb:34:in `show'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:425:in `_run__68865757__process_action__296144752__callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:28:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:361:in `perform_action_with_newrelic_trace'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:27:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:121:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:193:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:236:in `block in action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:35:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:538:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/developer_mode.rb:48:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/query_cache.rb:64:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/rack/logger.rb:13:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/engine.rb:456:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/application.rb:143:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+Rendered clients/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 233ms
+
+ActionView::Template::Error (/var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 	 status = 'done'
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "status != ? ",  status)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/controllers/clients_controller.rb:34:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:50:02 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.4ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+ERROR: compiling _app_views_clients_show_html_erb__558800726_96211460 RAISED /var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'
+Function body:           def _app_views_clients_show_html_erb__558800726_96211460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "clients/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+#staff_right p{width:98%}
+</style>
+<span id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</span>
+<div id="staff_right">
+');
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if !medical.nil?
+         today = Date.today
+	 status = 'pending'
+	 appointment = Appointment.find(:first, :conditions => [ "status = ? ",  status)
+
+	if appointment.nil?
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'appointment' );@output_buffer.safe_concat('
+'); 
+	else
+
+@output_buffer.safe_concat('	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          ');@output_buffer.append= ( appointment.total_drugs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 ');@output_buffer.append= ( appointment.due_date.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+');
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'medical' );@output_buffer.safe_concat('
+');
+end
+
+@output_buffer.safe_concat('</div>
+<p>
+  <b>Arv Number:</b>
+  ');@output_buffer.append= ( @client.arv_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Date of Birth:</b>
+  ');@output_buffer.append= ( @client.dob.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Gender:</b>
+  ');@output_buffer.append= ( @client.gender );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Education:</b>
+  ');@output_buffer.append= ( @client.education );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Occupation:</b>
+  ');@output_buffer.append= ( @client.occupation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Marital status:</b>
+  ');@output_buffer.append= ( @client.marital_status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Literacy level:</b>
+  ');@output_buffer.append= ( @client.literacy_level );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Phone:</b>
+  ');@output_buffer.append= ( @client.phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !medical.nil? 
+@output_buffer.safe_concat('<p>
+  <b>Regimen:</b>
+  ');@output_buffer.append= ( regimen );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+ <b>Takes CPT:</b>
+ ');@output_buffer.append= ( cpt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `module_eval'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `compile'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:190:in `compile!'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:143:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:55:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:142:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:150:in `block in render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:73:in `block in trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer_helpers.rb:82:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:71:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:149:in `render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:99:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mwai/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/var/www/edi_research/app/controllers/clients_controller.rb:34:in `show'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:425:in `_run__68865757__process_action__296144752__callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:28:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:361:in `perform_action_with_newrelic_trace'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:27:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:121:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:193:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:236:in `block in action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:35:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:538:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/developer_mode.rb:48:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/query_cache.rb:64:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/rack/logger.rb:13:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/engine.rb:456:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/application.rb:143:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+Rendered clients/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 104ms
+
+ActionView::Template::Error (/var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 	 status = 'pending'
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "status = ? ",  status)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/controllers/clients_controller.rb:34:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:50:03 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+ERROR: compiling _app_views_clients_show_html_erb__558800726_96211460 RAISED /var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'
+Function body:           def _app_views_clients_show_html_erb__558800726_96211460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "clients/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+#staff_right p{width:98%}
+</style>
+<span id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</span>
+<div id="staff_right">
+');
+medical = ClientMedical.find(:first, :conditions => [ "client_id = ?", @client.id ], :limit => 1)
+
+if !medical.nil?
+         today = Date.today
+	 status = 'pending'
+	 appointment = Appointment.find(:first, :conditions => [ "status = ? ",  status)
+
+	if appointment.nil?
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'appointment' );@output_buffer.safe_concat('
+'); 
+	else
+
+@output_buffer.safe_concat('	<p>
+	  <b>Total drugs given on previous visit:</b><br /><br />
+          ');@output_buffer.append= ( appointment.total_drugs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+	<p>
+         <b>Next appointment scheduled for:</b><br /><br />
+	 ');@output_buffer.append= ( appointment.due_date.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p>
+');
+	end
+        regimen = medical.regimen
+        cpt = medical.sulphur_allegy
+else
+
+@output_buffer.safe_concat('	');@output_buffer.append= ( render 'medical' );@output_buffer.safe_concat('
+');
+end
+
+@output_buffer.safe_concat('</div>
+<p>
+  <b>Arv Number:</b>
+  ');@output_buffer.append= ( @client.arv_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Date of Birth:</b>
+  ');@output_buffer.append= ( @client.dob.to_date.to_s(:long) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Gender:</b>
+  ');@output_buffer.append= ( @client.gender );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Education:</b>
+  ');@output_buffer.append= ( @client.education );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Occupation:</b>
+  ');@output_buffer.append= ( @client.occupation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Marital status:</b>
+  ');@output_buffer.append= ( @client.marital_status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Literacy level:</b>
+  ');@output_buffer.append= ( @client.literacy_level );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Phone:</b>
+  ');@output_buffer.append= ( @client.phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !medical.nil? 
+@output_buffer.safe_concat('<p>
+  <b>Regimen:</b>
+  ');@output_buffer.append= ( regimen );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+ <b>Takes CPT:</b>
+ ');@output_buffer.append= ( cpt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `module_eval'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:282:in `compile'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:190:in `compile!'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:143:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:55:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/template.rb:142:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:150:in `block in render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:73:in `block in trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer_helpers.rb:82:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/method_tracer.rb:71:in `trace_execution_scoped'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:149:in `render_with_newrelic'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:99:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/mwai/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/var/www/edi_research/app/controllers/clients_controller.rb:34:in `show'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:167:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:425:in `_run__68865757__process_action__296144752__callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/notifications.rb:53:in `instrument'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:28:in `block in process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:361:in `perform_action_with_newrelic_trace'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:27:in `process_action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/base.rb:121:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/abstract_controller/rendering.rb:45:in `process'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:193:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_controller/metal.rb:236:in `block in action'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:35:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/routing/route_set.rb:538:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/developer_mode.rb:48:in `traced_call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/query_cache.rb:64:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/rack/logger.rb:13:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/activesupport-3.1.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/engine.rb:456:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/application.rb:143:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/railties-3.1.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+/home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/passenger-4.0.46/lib/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+Rendered clients/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (/var/www/edi_research/app/views/clients/show.html.erb:12: syntax error, unexpected ')', expecting ']'):
+    9: if !medical.nil?
+    10:          today = Date.today
+    11: 	 status = 'pending'
+    12: 	 appointment = Appointment.find(:first, :conditions => [ "status = ? ",  status)
+    13: 
+    14: 	if appointment.nil?
+    15: %>
+  app/controllers/clients_controller.rb:34:in `show'
+
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/mwai/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:50:32 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' ) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (26.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 188ms (Views: 133.9ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:51:23 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' ) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 177ms (Views: 123.0ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:51:26 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.8ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' ) LIMIT 1[0m
+Rendered clients/show.html.erb within layouts/application (75.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 180ms (Views: 127.4ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:52:38 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.8ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.5ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 7 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.9ms)
+Rendered clients/show.html.erb within layouts/application (29.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 177ms (Views: 79.8ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 09:53:15 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"1", "taken_evening"=>"0", "due_date"=>"2015-10-14", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 09:53:15', 7, '2015-10-14', NULL, 0, 1, 30, '2015-09-14 09:53:15')[0m
+  [1m[35m (81.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 183ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:53:15 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.8ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.3ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `appointments` SET `status` = 'pending', `updated_at` = '2015-09-14 09:53:15' WHERE `appointments`.`id` = 10[0m
+  [1m[35m (71.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 7 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.8ms)
+Rendered clients/show.html.erb within layouts/application (74.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 251ms (Views: 124.3ms | ActiveRecord: 85.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:53:29 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 10 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.7ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 7 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (3.1ms)
+Rendered clients/show.html.erb within layouts/application (75.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 128.7ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:54:33 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 10 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.5ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.5ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/show.html.erb within layouts/application (24.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 182ms (Views: 75.9ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:54:53 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` [0m
+  [1m[35mAppointment Load (0.7ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.7ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.8ms)
+Rendered clients/show.html.erb within layouts/application (27.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 181ms (Views: 78.3ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2015-09-14 09:55:04 +0200
+  Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGHCDIRwD3f8yWWAXGQ21mWW6Tffhn1peWCiuWnMsmo=", "appointment"=>{"client_id"=>"1", "total_drugs"=>"30", "taken_morning"=>"1", "taken_evening"=>"", "due_date"=>"2015-08-28", "created_by"=>"7"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mClient Load (0.4ms)[0m  SELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `appointments` (`client_id`, `created_at`, `created_by`, `due_date`, `status`, `taken_evening`, `taken_morning`, `total_drugs`, `updated_at`) VALUES (1, '2015-09-14 09:55:04', 7, '2015-08-28', NULL, NULL, 1, 30, '2015-09-14 09:55:04')
+  [1m[36m (114.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 217ms
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:55:04 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.6ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 11 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `appointments` SET `status` = 'done', `updated_at` = '2015-09-14 09:55:05' WHERE `appointments`.`id` = 11
+  [1m[36m (63.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mClientMedical Load (0.6ms)[0m  SELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1[0m
+Rendered clients/_appointment.html.erb (2.8ms)
+Rendered clients/show.html.erb within layouts/application (29.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 246ms (Views: 126.4ms | ActiveRecord: 74.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-09-14 09:55:14 +0200
+  Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT `clients`.* FROM `clients` WHERE `clients`.`id` = 1 LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` 
+  [1m[36mAppointment Load (0.7ms)[0m  [1mSELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE `appointments`.`id` = 11 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mClientMedical Load (0.6ms)[0m  [1mSELECT `client_medicals`.* FROM `client_medicals` WHERE (client_id = 1) LIMIT 1[0m
+  [1m[35mAppointment Load (0.6ms)[0m  SELECT `appointments`.* FROM `appointments` WHERE (status = 'pending' AND client_id = 1 ) LIMIT 1
+Rendered clients/_appointment.html.erb (2.8ms)
+Rendered clients/show.html.erb within layouts/application (29.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+Completed 200 OK in 190ms (Views: 83.7ms | ActiveRecord: 13.5ms)

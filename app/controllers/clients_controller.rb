@@ -16,6 +16,20 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
     @appointment = Appointment.new
     @client_medical = ClientMedical.new
+    @appointments = Appointment.all
+    today = Date.today
+    
+    @appointments.each do |appointments|
+	if appointments.due_date.to_date < today
+		currentApp = Appointment.find(appointments.id)
+		currentApp.update_attribute :status, 'done'
+		currentApp.save
+        elsif appointments.due_date.to_date > today
+		currentApp = Appointment.find(appointments.id)
+		currentApp.update_attribute :status, 'pending'
+		currentApp.save
+	end	
+    end    
 
     respond_to do |format|
       format.html # show.html.erb

@@ -3796,3 +3796,464 @@
 [09/12/15 07:02:50 +0200 mwai (10806)] INFO : Doing deferred dependency-detection before Rack startup
 [09/12/15 07:03:14 +0200 mwai (10833)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
 [09/12/15 07:07:51 +0200 mwai (10833)] INFO : Starting Agent shutdown
+[09/12/15 16:11:28 +0200 mwai (10852)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[09/12/15 16:11:28 +0200 mwai (10852)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 16:48:49 +0200 mwai (10852)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[09/12/15 16:48:49 +0200 mwai (10852)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:01:02 +0200 mwai (10852)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[09/12/15 17:01:02 +0200 mwai (10852)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:07:42 +0200 mwai (10852)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[09/12/15 17:07:42 +0200 mwai (10852)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5059/5000 ms
+[09/12/15 17:10:06 +0200 mwai (10852)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[09/12/15 17:10:06 +0200 mwai (10852)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:12:02 +0200 mwai (10852)] INFO : Starting Agent shutdown
+[09/12/15 17:12:15 +0200 mwai (18444)] INFO : Starting the New Relic agent in "development" environment.
+[09/12/15 17:12:15 +0200 mwai (18444)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/12/15 17:12:15 +0200 mwai (18444)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : New Relic Agent Developer Mode enabled.
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Environment: development
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Dispatcher: passenger
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Application: My Application (Development)
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing Net instrumentation
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing deferred Rack instrumentation
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing Rack::Builder middleware instrumentation
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing ActiveRecord instrumentation
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing Rails 3+ middleware instrumentation
+[09/12/15 17:12:16 +0200 mwai (18444)] INFO : Installing Rails 3 Error instrumentation
+[09/12/15 17:12:17 +0200 mwai (18444)] INFO : Installing Rails 3 Controller instrumentation
+[09/12/15 17:12:17 +0200 mwai (18444)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/12/15 17:12:17 +0200 mwai (18444)] INFO : Finished instrumentation
+[09/12/15 17:12:18 +0200 mwai (18444)] INFO : Doing deferred dependency-detection before Rack startup
+[09/12/15 17:12:56 +0200 mwai (18466)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[09/12/15 17:12:56 +0200 mwai (18466)] ERROR : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:12:56 +0200 mwai (18466)] INFO : Will re-attempt in 60 seconds
+[09/12/15 17:14:30 +0200 mwai (18466)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[09/12/15 17:14:30 +0200 mwai (18466)] ERROR : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:14:30 +0200 mwai (18466)] INFO : Will re-attempt in 120 seconds
+[09/12/15 17:17:42 +0200 mwai (18466)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[09/12/15 17:17:42 +0200 mwai (18466)] ERROR : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[09/12/15 17:17:42 +0200 mwai (18466)] INFO : Will re-attempt in 180 seconds
+[09/12/15 17:21:39 +0200 mwai (18466)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[09/12/15 17:21:39 +0200 mwai (18466)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector-126.newrelic.com:443 after 2 attempts: end of file reached
+[09/12/15 17:21:39 +0200 mwai (18466)] INFO : Will re-attempt in 240 seconds
+[09/12/15 17:26:25 +0200 mwai (18466)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[09/12/15 17:26:25 +0200 mwai (18466)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector-126.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[09/12/15 17:26:25 +0200 mwai (18466)] INFO : Will re-attempt in 300 seconds
+[09/12/15 17:26:55 +0200 mwai (18466)] INFO : Starting Agent shutdown
+[09/12/15 17:27:02 +0200 mwai (19791)] INFO : Starting the New Relic agent in "development" environment.
+[09/12/15 17:27:02 +0200 mwai (19791)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/12/15 17:27:02 +0200 mwai (19791)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : New Relic Agent Developer Mode enabled.
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Environment: development
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Dispatcher: passenger
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Application: My Application (Development)
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Net instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing deferred Rack instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Rack::Builder middleware instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing ActiveRecord instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Rails 3+ middleware instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Rails 3 Error instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Rails 3 Controller instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/12/15 17:27:03 +0200 mwai (19791)] INFO : Finished instrumentation
+[09/12/15 17:27:04 +0200 mwai (19791)] INFO : Doing deferred dependency-detection before Rack startup
+[09/12/15 17:27:12 +0200 mwai (19809)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[09/12/15 22:15:00 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:15:00 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001556799 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:15:12 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:15:12 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002205834 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:15:12 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:15:12 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001430972 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:16:12 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:16:12 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002303498 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:16:12 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:16:12 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001687058 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:17:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:17:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002118357 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:17:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:17:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001905533 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:18:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:18:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002559042 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:18:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:18:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002152104 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:19:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:19:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002535128 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:19:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:19:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002194579 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:20:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:20:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002406132 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:20:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:20:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002127279 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:21:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:21:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002156553 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:21:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:21:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001809695 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:22:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:22:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002435391 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:22:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:22:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002050091 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:23:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:23:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002528038 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:23:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:23:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00192979 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:24:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:24:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002383358 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:24:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:24:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001945889 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:25:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:25:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002208383 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:25:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:25:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001817657 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:26:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:26:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002158063 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:26:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:26:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001462419 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:27:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:27:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002546904 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:27:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:27:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002120408 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:28:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:28:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002469918 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:28:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:28:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001976062 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:29:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:29:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002394638 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:29:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:29:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001267861 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:30:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:30:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001147813 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:30:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:30:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001869147 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:31:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:31:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002433691 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:31:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:31:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002108401 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:32:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:32:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002227815 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:32:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:32:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001888387 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:33:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:33:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002778742 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:33:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:33:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002025549 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:34:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:34:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003210412 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:34:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:34:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002074109 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:35:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:35:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002834985 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:35:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:35:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001784276 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:36:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:36:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002538006 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:36:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:36:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002002707 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:37:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:37:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002407432 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:37:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:37:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001946391 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:38:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:38:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002448717 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:38:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:38:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001889694 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:39:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:39:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003051357 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:39:13 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:39:13 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001986121 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:40:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:40:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002833585 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:40:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:40:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002471227 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:41:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:41:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002287355 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:41:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:41:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002553405 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:42:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:42:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001286478 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:42:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:42:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.000853465 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:43:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:43:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002098849 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:43:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:43:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001410116 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:44:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:44:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001958672 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:44:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:44:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001885496 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:45:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:45:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002220904 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:45:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:45:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001527664 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:46:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:46:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00274198 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:46:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:46:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001932305 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:47:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:47:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003022711 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:47:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:47:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001687234 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:48:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:48:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001423821 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:48:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:48:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001072637 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:49:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:49:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003126859 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:49:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:49:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002011008 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:50:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:50:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002668835 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:50:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:50:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001786936 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:51:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:51:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002193826 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:51:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:51:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001590093 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:52:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:52:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002434685 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:52:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:52:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002218244 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:53:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:53:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002768399 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:53:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:53:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001882046 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:54:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:54:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002194765 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:54:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:54:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001796803 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:55:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:55:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003307882 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:55:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:55:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00191966 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:56:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:56:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002637707 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:56:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:56:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001893936 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:57:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:57:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001897668 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:57:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:57:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001318441 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:58:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:58:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.003121374 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:58:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:58:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001573481 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:59:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 22:59:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00255308 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 22:59:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 22:59:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001810386 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:00:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:00:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002418721 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:00:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:00:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001970598 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:01:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:01:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002865159 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:01:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:01:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002173943 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:02:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:02:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001923476 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:02:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:02:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001489119 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:03:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:03:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002645386 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:03:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:03:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001784663 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:04:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:04:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002599537 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:04:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:04:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002176109 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:05:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:05:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00232891 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:05:14 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:05:14 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002006201 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:06:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:06:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001992478 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:06:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:06:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001811649 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:07:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:07:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001723742 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:07:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:07:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002112791 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:08:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:08:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001237816 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:08:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:08:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.000872971 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:09:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:09:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002512222 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:09:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:09:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002136446 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:10:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:10:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002698673 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:10:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:10:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001774636 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:11:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:11:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002693494 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:11:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:11:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002087176 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:12:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:12:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002834159 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:12:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:12:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001771231 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:13:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:13:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002495895 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:13:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:13:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001841961 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:14:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:14:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002339761 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:14:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:14:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002479833 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:15:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:15:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002195879 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:15:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:15:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001514439 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:16:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:16:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002442397 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:16:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:16:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001935085 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:17:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:17:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002718756 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:17:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:17:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002304038 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:18:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:18:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00262756 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:18:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:18:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001960764 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:19:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:19:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002523402 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:19:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:19:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002000222 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:20:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:20:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002903536 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:20:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:20:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001973185 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:21:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:21:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00222855 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:21:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:21:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.000914987 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:22:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:22:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002660263 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:22:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:22:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002122234 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:23:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:23:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001180359 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:23:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:23:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.000751682 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:24:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:24:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002604386 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:24:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:24:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001787414 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:25:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:25:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002594104 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:25:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:25:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001996414 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:26:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:26:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002715868 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:26:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:26:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00226439 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:27:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:27:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002916472 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:27:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:27:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00201924 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:28:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:28:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00237806 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:28:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:28:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002036005 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:29:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:29:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002716928 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:29:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:29:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002025668 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:30:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:30:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002286429 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:30:15 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:30:15 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00202071 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:31:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:31:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00210548 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:31:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:31:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001448707 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:32:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:32:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002398641 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:32:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:32:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001924194 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:33:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:33:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002732086 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:33:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:33:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001780277 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:34:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:34:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00246886 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:34:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:34:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001869003 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:35:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:35:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002645278 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:35:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:35:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001938494 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:36:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:36:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00227357 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:36:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:36:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001088222 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:37:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:37:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002522309 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:37:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:37:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001807611 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:38:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:38:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002975717 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:38:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:38:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002104583 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:39:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:39:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.0025706 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:39:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:39:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00186094 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:40:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:40:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002862599 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:40:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:40:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002022309 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:41:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:41:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002922912 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:41:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:41:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002039022 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:42:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:42:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002434247 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:42:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:42:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001896328 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:43:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:43:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001274637 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:43:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:43:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001934904 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:44:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:44:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002604404 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:44:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:44:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001616697 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:45:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:45:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002509614 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:45:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:45:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001857416 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:46:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:46:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002273147 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:46:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:46:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.002931328 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:47:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/12/15 23:47:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.001069471 seconds: getaddrinfo: Temporary failure in name resolution
+[09/12/15 23:47:16 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/12/15 23:47:16 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.000876366 seconds: getaddrinfo: Temporary failure in name resolution
+[09/13/15 09:51:36 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[09/13/15 09:51:36 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.051221581 seconds: getaddrinfo: Temporary failure in name resolution
+[09/13/15 09:51:36 +0200 mwai (19809)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[09/13/15 09:51:36 +0200 mwai (19809)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-126.newrelic.com:443 after 0.00120879 seconds: getaddrinfo: Temporary failure in name resolution
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Starting the New Relic agent in "development" environment.
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : New Relic Agent Developer Mode enabled.
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Environment: development
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Dispatcher: passenger
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Application: My Application (Development)
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Installing Net instrumentation
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Installing deferred Rack instrumentation
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Installing Rack::Builder middleware instrumentation
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Installing ActiveRecord instrumentation
+[09/14/15 09:36:21 +0200 mwai (17703)] INFO : Installing Rails 3+ middleware instrumentation
+[09/14/15 09:36:22 +0200 mwai (17703)] INFO : Installing Rails 3 Error instrumentation
+[09/14/15 09:36:22 +0200 mwai (17703)] INFO : Installing Rails 3 Controller instrumentation
+[09/14/15 09:36:22 +0200 mwai (17703)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/14/15 09:36:22 +0200 mwai (17703)] INFO : Finished instrumentation
+[09/14/15 09:36:23 +0200 mwai (17703)] INFO : Doing deferred dependency-detection before Rack startup
+[09/14/15 09:36:28 +0200 mwai (17723)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
