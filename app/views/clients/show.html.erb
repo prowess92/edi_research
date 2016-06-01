@@ -16,6 +16,8 @@ if !medical.nil?
 	<%= render 'appointment' %>
 <% 
 	else
+	months = Time.now.to_date - medical.enrollment_date.to_date 
+	months = months / 30
 %>
 	<p>
 	  <b>Duration of drugs to be taken on previous visit (days):</b><br /><br />
@@ -24,6 +26,10 @@ if !medical.nil?
 	<p>
          <b>Next appointment scheduled for:</b><br /><br />
 	 <%= appointment.due_date.to_date.to_s(:long) %>
+	</p>
+	<p>
+         <b>Months on ART:</b><br /><br />
+	 <%= months.to_i %>
 	</p>
 <%
 	end

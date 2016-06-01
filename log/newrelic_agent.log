@@ -5019,3 +5019,50 @@
 [06/01/16 09:13:46 +0200 baobab (4812)] INFO : Finished instrumentation
 [06/01/16 09:13:47 +0200 baobab (4812)] INFO : Doing deferred dependency-detection before Rack startup
 [06/01/16 09:13:53 +0200 baobab (4893)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Starting the New Relic agent in "development" environment.
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : New Relic Agent Developer Mode enabled.
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Environment: development
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Dispatcher: passenger
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Application: My Application (Development)
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing Rails 3+ middleware instrumentation
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing deferred Rack instrumentation
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing Rack::Builder middleware instrumentation
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing ActiveRecord instrumentation
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing Net instrumentation
+[06/01/16 09:54:26 +0200 baobab (7736)] INFO : Installing Rails 3 Controller instrumentation
+[06/01/16 09:54:27 +0200 baobab (7736)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/01/16 09:54:27 +0200 baobab (7736)] INFO : Installing Rails 3 Error instrumentation
+[06/01/16 09:54:27 +0200 baobab (7736)] INFO : Finished instrumentation
+[06/01/16 09:54:27 +0200 baobab (7736)] INFO : Doing deferred dependency-detection before Rack startup
+[06/01/16 09:54:34 +0200 baobab (7758)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/01/16 09:54:59 +0200 baobab (7781)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/01/16 09:59:05 +0200 baobab (4893)] INFO : Starting Agent shutdown
+[06/01/16 09:59:05 +0200 baobab (4893)] INFO : Unable to send metric_data data, will try again later. Error: 
+[06/01/16 09:59:05 +0200 baobab (4893)] INFO : OpenSSL::SSL::SSLError: SSL_write:: bad write retry
+[06/01/16 09:59:28 +0200 baobab (7758)] INFO : Starting Agent shutdown
+[06/01/16 11:14:01 +0200 baobab (7781)] INFO : Starting Agent shutdown
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Starting the New Relic agent in "development" environment.
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : New Relic Agent Developer Mode enabled.
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Environment: development
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Dispatcher: passenger
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Application: My Application (Development)
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Rails 3+ middleware instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing deferred Rack instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Rack::Builder middleware instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing ActiveRecord instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Net instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Rails 3 Controller instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Installing Rails 3 Error instrumentation
+[06/01/16 11:20:57 +0200 baobab (11558)] INFO : Finished instrumentation
+[06/01/16 11:20:58 +0200 baobab (11558)] INFO : Doing deferred dependency-detection before Rack startup
+[06/01/16 11:21:05 +0200 baobab (11576)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/01/16 11:21:05 +0200 baobab (11585)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/01/16 11:25:12 +0200 baobab (11576)] INFO : Starting Agent shutdown
+[06/01/16 11:25:12 +0200 baobab (11585)] INFO : Starting Agent shutdown

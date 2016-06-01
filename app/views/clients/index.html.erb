@@ -16,7 +16,7 @@
   </tr>
 <% @clients.each do |client| %>
   <tr>
-    <td><%= client.arv_number %></td>
+    <td>&nbsp;<%= client.arv_number %></td>
     <td><%= client.dob.to_date.to_s(:long) %></td>
     <td><%= client.gender %></td>
     <td><%= client.education %></td>
