@@ -4,9 +4,11 @@ ini_set('display_errors', 1);
 echo "<table>";
 echo "<tr>";
 echo "<th>ARV Number</th>";
+echo "<th>Drug Taken</th>";
+echo "<th>Duration</th>";
 echo "</tr>";
 //database connection 
- $connect = mysqli_connect('localhost', 'root', 'root', 'openmrs_pirimiti');
+ $connect = mysqli_connect('172.25.9.131', 'root', 'root', 'openmrs');
  
 $q="SELECT 
 (SELECT identifier FROM patient_identifier a WHERE a.patient_id = d.person_id 
@@ -22,12 +24,12 @@ AND c.person_attribute_type_id = 12 AND  c.voided = 0  LIMIT 1) cellphone_number
 (SELECT date_enrolled FROM patient_program e WHERE e.patient_id = d.person_id AND 
 e.program_id = 1 AND e.voided = 0 LIMIT 1) enrollment_date,
 (SELECT instructions FROM orders g WHERE g.patient_id = d.person_id AND
- g.voided = 0 ORDER BY g.date_created DESC LIMIT 1) drug_taken,
+ g.voided = 0 ORDER BY g.date_created AND g.instructions != 'Cotrimoxazole (960mg): 1 tab(s) ONCE A DAY (OD) (CPT)' DESC LIMIT 1) drug_taken,
  (SELECT DATEDIFF(h.auto_expire_date,h.start_date) FROM orders h WHERE h.patient_id = d.person_id AND
  h.voided = 0 ORDER BY h.date_created DESC LIMIT 1) duration,
  (SELECT DATE(i.auto_expire_date) FROM orders i WHERE i.patient_id = d.person_id AND
  i.voided = 0 ORDER BY i.date_created DESC LIMIT 1) next_appointment
-FROM person d WHERE d.person_id IN (36, 37, 39, 38) AND DATEDIFF(now(),d.birthdate)/365 > 18";
+FROM person d WHERE d.person_id IN (552497, 552479, 552436, 552415) AND DATEDIFF(now(),d.birthdate)/365 > 18";
 $r=mysqli_query($connect,$q);
 
 $edi = new mysqli('localhost', 'root', 'root', 'edi');
@@ -63,8 +65,8 @@ VALUES ('$new_client_id','$drug_taken', now(), now())";
 
 	$edi->query($client_medicals);        
 
-	$appointments =  "INSERT INTO appointments (client_id,due_date,duration,created_at,updated_at) 
-VALUES ('$new_client_id',DATE('$next_appointment'), '$duration', now(), now())";
+	$appointments =  "INSERT INTO appointments (client_id,due_date,duration,created_by,created_at,updated_at) 
+VALUES ('$new_client_id',DATE('$next_appointment'), '$duration', 'Edith Kumwenda', now(), now())";
 
 	$edi->query($appointments); 
 
@@ -72,8 +74,8 @@ VALUES ('$new_client_id',DATE('$next_appointment'), '$duration', now(), now())";
 
 	echo "<tr>";
 	echo "<td>".$arv_number."</td>";
-	echo "<td>".$new_client_id."</td>";
-	echo "<td>".$new_appointment_id."</td>";
+	echo "<td>".$drug_taken."</td>";
+	echo "<td>".$duration."</td>";
 	echo "</tr>";
 
 }
