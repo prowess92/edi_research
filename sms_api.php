@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 function sendSMS($number, $message) { 
         $url = "https://cloud.frontlinesms.com/api/1/webhook"; /* Set your frontlinesms or frontlinecloud webconnection url here*/
-        $secret = "99be761d-30b5-46d6-b820-205534160628"; // Set the secret here
+        $secret = "f892aa73-3021-437c-9087-fa15423f96ad"; // Set the secret here
         $request = array( 
                         'apiKey' => $secret, 
 			'payload' => array(
