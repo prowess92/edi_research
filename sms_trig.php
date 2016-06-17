@@ -3,14 +3,14 @@
 include 'sms_api.php'; 
 
 $edi = new mysqli('localhost', 'root', 'root', 'edi');
-$q = "SELECT `id`, `phone` FROM clients WHERE phone != 'unknown' AND phone != 'N/A' AND phone != 'none' AND phone IS NOT NULL";
+$q = "SELECT `id`, `phone` FROM clients WHERE phone != 'unknown' AND phone != 'N/A' AND phone != 'none' AND phone IS NOT NULL AND consent = 1";
 $r=mysqli_query($edi,$q);
 
 while ($s=mysqli_fetch_array($r)){
 	$current_id = $s['id'];
 	$current_number = $s['phone'];
 	
-
+	
 	//for daily sms reminders change value of $message_daily variable
 	$message_daily = 'Mukukumbitsidwa kuti musayiwale kamwedwe mwadongosolo loyenelera musanagone. Paja ndi limodzi kamodzi.';
 

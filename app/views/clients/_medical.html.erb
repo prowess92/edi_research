@@ -15,6 +15,10 @@
     <%= f.hidden_field :client_id, :value => @client.id %>
   </div>
   <div class="field">
+    <label>Enrollment date</label>
+    <input type="date" id="client_medical_enrollment_date" name="client_medical[enrollment_date]" / >
+  </div>
+  <div class="field">
     <%= f.label :regimen %>
     <%= f.select(:regimen, options_for_select(['0A', '0P', '1A', '1P', '2A',  '2P', '3A', '3P', '4A', '4P', '5A', '6A', '7A', '8A', '9A', 'non standard'])) %>
   </div>

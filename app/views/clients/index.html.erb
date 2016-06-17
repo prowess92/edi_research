@@ -17,7 +17,7 @@
 <% @clients.each do |client| %>
   <tr>
     <td>&nbsp;<%= client.arv_number %></td>
-    <td><%= client.dob.to_date.to_s(:long) %></td>
+    <td><%= client.dob.to_date %></td>
     <td><%= client.gender %></td>
     <td><%= client.education %></td>
     <td><%= client.occupation %></td>
@@ -26,7 +26,6 @@
     <td><%= client.phone %></td>
     <td><%= link_to 'Show', client %></td>
     <td><%= link_to 'Edit', edit_client_path(client) %></td>
-    <td><%= link_to 'Destroy', client, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
   <tr style="background:#fff;"><td style="background:#fff;" colspan="11">&nbsp;</td></tr>
 <% end %>

@@ -16,6 +16,10 @@
     <%= f.text_field :arv_number %>
   </div>
   <div class="field">
+    <%= f.label :patient_identifier %>
+    <%= f.text_field :patient_identifier %>
+  </div>
+  <div class="field">
     <%= f.label :dob %>
     <input type="date" id="client_dob" name="client[dob]" / >
     
@@ -44,7 +48,13 @@
     <%= f.label :phone %>
     <%= f.number_field :phone %>
   </div>
-  <br />
+  <div class="field">
+    <label>Agreed to be involved in study</label>
+    <%= f.radio_button :consent, true %>
+    <label for="client_consent_true" >Yes</label>
+    <%= f.radio_button :consent, false %>
+    <label for="client_consent_false" >No</label>
+  </div>
   <div class="actions">
     <%= f.submit :class => 'more_button' %>
   </div>
