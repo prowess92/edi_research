@@ -5151,3 +5151,4 @@
 [06/17/16 12:53:13 +0200 baobab (9358)] INFO : Starting Agent shutdown
 [06/17/16 13:13:29 +0200 baobab (9367)] WARN : Metric Nested/Controller/Rack/Edi::Application/call has negative duration: -1.2275240421295166 s
 [06/17/16 13:13:29 +0200 baobab (9367)] WARN : Metric Nested/Controller/Rack/Edi::Application/call has negative exclusive time: duration = -1.2275240421295166 s, child_time = 0.10563898086547852
+[06/17/16 16:23:13 +0200 baobab (9367)] INFO : Starting Agent shutdown

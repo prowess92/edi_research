@@ -4756,3 +4756,4 @@ App 9340 stdout:
 [ 2016-06-17 12:48:13.6499 9303/7f1f425aa700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 9340, listening on unix:/tmp/passenger.1.0.9299/generation-0/backends/preloader.9340
 App 9358 stdout: 
 App 9367 stdout: 
+[ 2016-06-17 16:23:13.2650 9309/7ffa370ab740 agents/LoggingAgent/Main.cpp:289 ]: Caught signal, exiting...
