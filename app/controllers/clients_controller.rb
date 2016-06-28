@@ -1,4 +1,8 @@
 class ClientsController < ApplicationController
+  layout nil
+  layout 'application', :except => :arvresult
+
+
   # GET /clients
   # GET /clients.json
   def index

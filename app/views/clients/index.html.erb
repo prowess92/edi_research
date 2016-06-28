@@ -1,5 +1,28 @@
-<h1>Listing clients</h1>
+<script>
+$(document).ready(function($){
 
+$('#searcher').click(function(){
+        var search = $("input#search_entry").val();
+
+	$.ajax({ 
+  	type: 'GET', 
+  	url: '/clients', 
+  	data: "search=" + search, 
+ 	success: function(data){
+		$('#search_title').html('search results for:&nbsp;' + search);
+		$('.clients').html('').load('/clients/arvresult?search=' + search);}
+	}); 
+	return false;
+  });
+
+});
+</script>
+<%= render :partial => 'search' %>
+<div class="clients">
+<%
+	if params[:search].nil? 
+%>
+<h1>Listing clients</h1>
 <table style="width:99%">
   <tr style="background:#fff;">
     <td style="font-weight:bold;">Arv number</td>
@@ -30,4 +53,45 @@
   <tr style="background:#fff;"><td style="background:#fff;" colspan="11">&nbsp;</td></tr>
 <% end %>
 </table>
+<%
+    else
+%>
+<table style="width:99%">
+  <tr style="background:#fff;">
+    <td style="font-weight:bold;">Arv number</td>
+    <td style="font-weight:bold;">Date of Birth</td>
+    <td style="font-weight:bold;">Gender</td>
+    <td style="font-weight:bold;">Education</td>
+    <td style="font-weight:bold;">Occupation</td>
+    <td style="font-weight:bold;">Marital status</td>
+    <td style="font-weight:bold;">Literacy level</td>
+    <td style="font-weight:bold;">Phone</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+<% 
+    search = params[:search]
+
+    Client.find_by_sql(["SELECT * FROM edi.clients WHERE clients.arv_number LIKE ?", "%#{search}%"]).each do |client|
+%>
+<tr>
+    <td>&nbsp;<%= client.arv_number %></td>
+    <td><%= client.dob.to_date %></td>
+    <td><%= client.gender %></td>
+    <td><%= client.education %></td>
+    <td><%= client.occupation %></td>
+    <td><%= client.marital_status %></td>
+    <td><%= client.literacy_level %></td>
+    <td><%= client.phone %></td>
+    <td><%= link_to 'Show', client %></td>
+    <td><%= link_to 'Edit', edit_client_path(client) %></td>
+  </tr>
+  <tr style="background:#fff;"><td style="background:#fff;" colspan="11">&nbsp;</td></tr>
+<% end %>
+</table>
+<%
+    end 
+%>
+</div>
 

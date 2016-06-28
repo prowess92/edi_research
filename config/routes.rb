@@ -1,6 +1,7 @@
 
 Edi::Application.routes.draw do
   
+  match '/clients/arvresult' => 'clients#arvresult' 
 
   resources :client_medicals
 
@@ -22,6 +23,7 @@ Edi::Application.routes.draw do
 
 
   root :to => "dashboard#index"
+  
   match '/appointments/:id/destroy' => 'appointments#destroy'
   match '/users/:id/destroy' => 'users#destroy'
   match '/sales/:id/edit' => 'sales#destroy'
@@ -48,7 +50,7 @@ Edi::Application.routes.draw do
   match '/items/duplicate' => 'items#duplicate'
   match '/items/merger' => 'items#merger' 
   match '/items/merged' => 'items#merged'
-  match '/items/itemslist' => 'items#itemslist' 
+  
 
   get "clients/_form"
 
