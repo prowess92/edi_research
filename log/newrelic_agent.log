@@ -5152,3 +5152,127 @@
 [06/17/16 13:13:29 +0200 baobab (9367)] WARN : Metric Nested/Controller/Rack/Edi::Application/call has negative duration: -1.2275240421295166 s
 [06/17/16 13:13:29 +0200 baobab (9367)] WARN : Metric Nested/Controller/Rack/Edi::Application/call has negative exclusive time: duration = -1.2275240421295166 s, child_time = 0.10563898086547852
 [06/17/16 16:23:13 +0200 baobab (9367)] INFO : Starting Agent shutdown
+[06/18/16 20:04:11 +0200 baobab (3373)] INFO : Starting the New Relic agent in "development" environment.
+[06/18/16 20:04:11 +0200 baobab (3373)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/18/16 20:04:11 +0200 baobab (3373)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/18/16 20:04:12 +0200 baobab (3373)] INFO : New Relic Agent Developer Mode enabled.
+[06/18/16 20:04:12 +0200 baobab (3373)] INFO : Environment: development
+[06/18/16 20:04:12 +0200 baobab (3373)] INFO : Dispatcher: passenger
+[06/18/16 20:04:12 +0200 baobab (3373)] INFO : Application: My Application (Development)
+[06/18/16 20:04:12 +0200 baobab (3373)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing Rails 3+ middleware instrumentation
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing deferred Rack instrumentation
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing Rack::Builder middleware instrumentation
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing ActiveRecord instrumentation
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing Net instrumentation
+[06/18/16 20:04:13 +0200 baobab (3373)] INFO : Installing Rails 3 Controller instrumentation
+[06/18/16 20:04:14 +0200 baobab (3373)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/18/16 20:04:14 +0200 baobab (3373)] INFO : Installing Rails 3 Error instrumentation
+[06/18/16 20:04:14 +0200 baobab (3373)] INFO : Finished instrumentation
+[06/18/16 20:04:16 +0200 baobab (3373)] INFO : Doing deferred dependency-detection before Rack startup
+[06/18/16 20:04:32 +0200 baobab (3413)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/18/16 20:04:34 +0200 baobab (3422)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/18/16 20:05:30 +0200 baobab (3413)] INFO : Starting Agent shutdown
+[06/18/16 20:05:30 +0200 baobab (3422)] INFO : Starting Agent shutdown
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Starting the New Relic agent in "development" environment.
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : New Relic Agent Developer Mode enabled.
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Environment: development
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Dispatcher: passenger
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Application: My Application (Development)
+[06/18/16 20:33:09 +0200 baobab (5370)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Rails 3+ middleware instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing deferred Rack instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Rack::Builder middleware instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing ActiveRecord instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Net instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Rails 3 Controller instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Installing Rails 3 Error instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Finished instrumentation
+[06/18/16 20:33:10 +0200 baobab (5370)] INFO : Doing deferred dependency-detection before Rack startup
+[06/18/16 20:33:35 +0200 baobab (5397)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/18/16 20:33:41 +0200 baobab (5388)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/18/16 20:38:11 +0200 baobab (5388)] INFO : Starting Agent shutdown
+[06/18/16 21:12:56 +0200 baobab (5397)] INFO : Starting Agent shutdown
+[06/26/16 16:14:56 +0200 baobab (6620)] INFO : Starting the New Relic agent in "development" environment.
+[06/26/16 16:14:56 +0200 baobab (6620)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/26/16 16:14:56 +0200 baobab (6620)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/26/16 16:14:57 +0200 baobab (6620)] INFO : New Relic Agent Developer Mode enabled.
+[06/26/16 16:14:57 +0200 baobab (6620)] INFO : Environment: development
+[06/26/16 16:14:57 +0200 baobab (6620)] INFO : Dispatcher: passenger
+[06/26/16 16:14:57 +0200 baobab (6620)] INFO : Application: My Application (Development)
+[06/26/16 16:14:57 +0200 baobab (6620)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/26/16 16:14:59 +0200 baobab (6620)] INFO : Installing Rails 3+ middleware instrumentation
+[06/26/16 16:14:59 +0200 baobab (6620)] INFO : Installing deferred Rack instrumentation
+[06/26/16 16:14:59 +0200 baobab (6620)] INFO : Installing Rack::Builder middleware instrumentation
+[06/26/16 16:14:59 +0200 baobab (6620)] INFO : Installing ActiveRecord instrumentation
+[06/26/16 16:14:59 +0200 baobab (6620)] INFO : Installing Net instrumentation
+[06/26/16 16:15:00 +0200 baobab (6620)] INFO : Installing Rails 3 Controller instrumentation
+[06/26/16 16:15:02 +0200 baobab (6620)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/26/16 16:15:02 +0200 baobab (6620)] INFO : Installing Rails 3 Error instrumentation
+[06/26/16 16:15:02 +0200 baobab (6620)] INFO : Finished instrumentation
+[06/26/16 16:15:05 +0200 baobab (6620)] INFO : Doing deferred dependency-detection before Rack startup
+[06/26/16 16:15:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:15:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:15:07 +0200 baobab (6641)] INFO : Will re-attempt in 60 seconds
+[06/26/16 16:16:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:16:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:16:07 +0200 baobab (6641)] INFO : Will re-attempt in 120 seconds
+[06/26/16 16:18:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:18:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:18:07 +0200 baobab (6641)] INFO : Will re-attempt in 180 seconds
+[06/26/16 16:21:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:21:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:21:07 +0200 baobab (6641)] INFO : Will re-attempt in 240 seconds
+[06/26/16 16:25:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:25:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:25:07 +0200 baobab (6641)] INFO : Will re-attempt in 300 seconds
+[06/26/16 16:30:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:30:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:30:07 +0200 baobab (6641)] INFO : Will re-attempt in 360 seconds
+[06/26/16 16:36:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:36:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:36:07 +0200 baobab (6641)] INFO : Will re-attempt in 420 seconds
+[06/26/16 16:43:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:43:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:43:07 +0200 baobab (6641)] INFO : Will re-attempt in 480 seconds
+[06/26/16 16:51:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 16:51:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 16:51:07 +0200 baobab (6641)] INFO : Will re-attempt in 540 seconds
+[06/26/16 17:00:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 17:00:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 17:00:07 +0200 baobab (6641)] INFO : Will re-attempt in 600 seconds
+[06/26/16 17:10:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 17:10:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 17:10:07 +0200 baobab (6641)] INFO : Will re-attempt in 600 seconds
+[06/26/16 17:20:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 17:20:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 17:20:07 +0200 baobab (6641)] INFO : Will re-attempt in 600 seconds
+[06/26/16 17:30:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 17:30:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 17:30:07 +0200 baobab (6641)] INFO : Will re-attempt in 600 seconds
+[06/26/16 17:40:07 +0200 baobab (6641)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[06/26/16 17:40:07 +0200 baobab (6641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: Temporary failure in name resolution
+[06/26/16 17:40:07 +0200 baobab (6641)] INFO : Will re-attempt in 600 seconds
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Starting the New Relic agent in "development" environment.
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : New Relic Agent Developer Mode enabled.
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Environment: development
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Dispatcher: passenger
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Application: My Application (Development)
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing Rails 3+ middleware instrumentation
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing deferred Rack instrumentation
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing Rack::Builder middleware instrumentation
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing ActiveRecord instrumentation
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing Net instrumentation
+[06/26/16 20:31:15 +0200 baobab (3948)] INFO : Installing Rails 3 Controller instrumentation
+[06/26/16 20:31:16 +0200 baobab (3948)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/26/16 20:31:16 +0200 baobab (3948)] INFO : Installing Rails 3 Error instrumentation
+[06/26/16 20:31:16 +0200 baobab (3948)] INFO : Finished instrumentation
+[06/26/16 20:31:17 +0200 baobab (3948)] INFO : Doing deferred dependency-detection before Rack startup
+[06/26/16 20:31:24 +0200 baobab (3966)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
+[06/26/16 20:50:17 +0200 baobab (3966)] INFO : Starting Agent shutdown

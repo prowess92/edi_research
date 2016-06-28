@@ -4757,3 +4757,33 @@ App 9340 stdout:
 App 9358 stdout: 
 App 9367 stdout: 
 [ 2016-06-17 16:23:13.2650 9309/7ffa370ab740 agents/LoggingAgent/Main.cpp:289 ]: Caught signal, exiting...
+[ 2016-06-18 20:04:01.4838 3333/7ff106577740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xeGtzcHBpL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1xksppi/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '3332', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-06-18 20:04:01.5394 3336/7f3b26a0b740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3332/generation-0/request
+[ 2016-06-18 20:04:01.7323 3342/7f832d7a1740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3332/generation-0/logging
+[ 2016-06-18 20:04:01.7326 3333/7ff106577740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 3373 stdout: 
+[ 2016-06-18 20:04:16.7299 3336/7f3b26904700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 3373, listening on unix:/tmp/passenger.1.0.3332/generation-0/backends/preloader.3373
+App 3413 stdout: 
+App 3422 stdout: 
+[ 2016-06-18 20:33:04.5980 5330/7f932964f740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xYWgwaHZ0L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1ah0hvt/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '5329', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-06-18 20:33:04.6027 5333/7f93b6367740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5329/generation-0/request
+[ 2016-06-18 20:33:04.6073 5339/7f10224a5740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5329/generation-0/logging
+[ 2016-06-18 20:33:04.6075 5330/7f932964f740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 5370 stdout: 
+[ 2016-06-18 20:33:11.0690 5333/7f93b6260700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 5370, listening on unix:/tmp/passenger.1.0.5329/generation-0/backends/preloader.5370
+App 5388 stdout: 
+App 5397 stdout: 
+[ 2016-06-26 16:14:02.2308 6581/7f61ed431740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xZnVwMHl6L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1fup0yz/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '6580', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-06-26 16:14:04.0829 6584/7fedae713740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6580/generation-0/request
+[ 2016-06-26 16:14:07.5260 6590/7f25556c2740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6580/generation-0/logging
+[ 2016-06-26 16:14:07.5263 6581/7f61ed431740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 6620 stdout: 
+[ 2016-06-26 16:15:06.6746 6584/7fedae60c700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 6620, listening on unix:/tmp/passenger.1.0.6580/generation-0/backends/preloader.6620
+App 6641 stdout: 
+[ 2016-06-26 20:31:04.6229 3908/7f7088b93740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4yamRieHovdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.2jdbxz/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '3907', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-06-26 20:31:04.7020 3911/7fbb394a3740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3907/generation-0/request
+[ 2016-06-26 20:31:04.8717 3916/7fa0d7907740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3907/generation-0/logging
+[ 2016-06-26 20:31:04.8723 3908/7f7088b93740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 3948 stdout: 
+[ 2016-06-26 20:31:17.5990 3911/7fbb3939c700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 3948, listening on unix:/tmp/passenger.1.0.3907/generation-0/backends/preloader.3948
+App 3966 stdout: 
