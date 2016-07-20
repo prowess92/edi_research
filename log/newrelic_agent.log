@@ -5364,3 +5364,65 @@
 [06/28/16 23:39:17 +0200 baobab (6762)] INFO : Starting Agent shutdown
 [06/28/16 23:39:24 +0200 baobab (6762)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
 [06/28/16 23:39:24 +0200 baobab (6762)] INFO : OpenSSL::SSL::SSLError: SSL_write:: bad write retry
+[07/20/16 13:36:53 +0200 baobab (7009)] INFO : Starting the New Relic agent in "development" environment.
+[07/20/16 13:36:53 +0200 baobab (7009)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/20/16 13:36:53 +0200 baobab (7009)] INFO : Reading configuration from config/newrelic.yml (/var/www/edi_research)
+[07/20/16 13:36:55 +0200 baobab (7009)] INFO : New Relic Agent Developer Mode enabled.
+[07/20/16 13:36:55 +0200 baobab (7009)] INFO : Environment: development
+[07/20/16 13:36:55 +0200 baobab (7009)] INFO : Dispatcher: passenger
+[07/20/16 13:36:55 +0200 baobab (7009)] INFO : Application: My Application (Development)
+[07/20/16 13:36:55 +0200 baobab (7009)] INFO : Deferring startup of agent reporting thread because passenger may fork.
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing Rails 3+ middleware instrumentation
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing deferred Rack instrumentation
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing Rack::Builder middleware instrumentation
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing ActiveRecord instrumentation
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing Net instrumentation
+[07/20/16 13:36:58 +0200 baobab (7009)] INFO : Installing Rails 3 Controller instrumentation
+[07/20/16 13:37:01 +0200 baobab (7009)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/20/16 13:37:01 +0200 baobab (7009)] INFO : Installing Rails 3 Error instrumentation
+[07/20/16 13:37:01 +0200 baobab (7009)] INFO : Finished instrumentation
+[07/20/16 13:37:06 +0200 baobab (7009)] INFO : Doing deferred dependency-detection before Rack startup
+[07/20/16 13:37:07 +0200 baobab (7058)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:37:07 +0200 baobab (7058)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:37:07 +0200 baobab (7058)] INFO : Will re-attempt in 60 seconds
+[07/20/16 13:37:07 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:37:07 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:37:07 +0200 baobab (7067)] INFO : Will re-attempt in 60 seconds
+[07/20/16 13:38:07 +0200 baobab (7058)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:38:07 +0200 baobab (7058)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:38:07 +0200 baobab (7058)] INFO : Will re-attempt in 120 seconds
+[07/20/16 13:38:07 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:38:07 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:38:07 +0200 baobab (7067)] INFO : Will re-attempt in 120 seconds
+[07/20/16 13:40:08 +0200 baobab (7058)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:40:08 +0200 baobab (7058)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:40:08 +0200 baobab (7058)] INFO : Will re-attempt in 180 seconds
+[07/20/16 13:40:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:40:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:40:08 +0200 baobab (7067)] INFO : Will re-attempt in 180 seconds
+[07/20/16 13:42:07 +0200 baobab (7058)] INFO : Starting Agent shutdown
+[07/20/16 13:43:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:43:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:43:08 +0200 baobab (7067)] INFO : Will re-attempt in 240 seconds
+[07/20/16 13:47:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:47:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:47:08 +0200 baobab (7067)] INFO : Will re-attempt in 300 seconds
+[07/20/16 13:52:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:52:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:52:08 +0200 baobab (7067)] INFO : Will re-attempt in 360 seconds
+[07/20/16 13:58:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 13:58:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 13:58:08 +0200 baobab (7067)] INFO : Will re-attempt in 420 seconds
+[07/20/16 14:05:08 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 14:05:08 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 14:05:08 +0200 baobab (7067)] INFO : Will re-attempt in 480 seconds
+[07/20/16 14:13:09 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 14:13:09 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 14:13:09 +0200 baobab (7067)] INFO : Will re-attempt in 540 seconds
+[07/20/16 14:22:09 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 14:22:09 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 14:22:09 +0200 baobab (7067)] INFO : Will re-attempt in 600 seconds
+[07/20/16 14:32:09 +0200 baobab (7067)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[07/20/16 14:32:09 +0200 baobab (7067)] ERROR : OpenSSL::SSL::SSLError: hostname does not match the server certificate
+[07/20/16 14:32:09 +0200 baobab (7067)] INFO : Will re-attempt in 600 seconds
+[07/20/16 14:32:32 +0200 baobab (7067)] INFO : Starting Agent shutdown
