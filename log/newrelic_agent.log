@@ -5360,3 +5360,7 @@
 [06/28/16 23:36:07 +0200 baobab (6762)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1049335/applications/7677588
 [06/28/16 23:36:08 +0200 baobab (6762)] WARN : Skipping RUM instrumentation. Unable to find <body> tag in first 50000 bytes of document.
 [06/28/16 23:38:24 +0200 baobab (6762)] WARN : Skipping RUM instrumentation. Unable to find <body> tag in first 50000 bytes of document.
+[06/28/16 23:39:17 +0200 baobab (6753)] INFO : Starting Agent shutdown
+[06/28/16 23:39:17 +0200 baobab (6762)] INFO : Starting Agent shutdown
+[06/28/16 23:39:24 +0200 baobab (6762)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[06/28/16 23:39:24 +0200 baobab (6762)] INFO : OpenSSL::SSL::SSLError: SSL_write:: bad write retry
