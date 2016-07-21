@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   layout nil
-  layout 'application', :except => :arvresult
+  layout 'application', :except => :arvresult, :except => :phoneresult
 
 
   # GET /clients

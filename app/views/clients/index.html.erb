@@ -15,9 +15,30 @@ $('#searcher').click(function(){
 	return false;
   });
 
+$('#phoner').click(function(){
+        var phone = $("input#phone_entry").val();
+
+	$.ajax({ 
+  	type: 'GET', 
+  	url: '/clients', 
+  	data: "phone=" + phone, 
+ 	success: function(data){
+		$('#search_title').html('search results for:&nbsp;' + phone);
+		$('.clients').html('').load('/clients/phoneresult?phone=' + phone);}
+	}); 
+	return false;
+  });
+
+
 });
 </script>
+<div style="display:inline-block">
 <%= render :partial => 'search' %>
+</div>
+<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>
+<div style="display:inline-block">
+<%= render :partial => 'phone' %>
+</div>
 <div class="clients">
 <%
 	if params[:search].nil? 

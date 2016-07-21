@@ -2,6 +2,7 @@
 Edi::Application.routes.draw do
   
   match '/clients/arvresult' => 'clients#arvresult' 
+  match '/clients/phoneresult' => 'clients#phoneresult' 
 
   resources :client_medicals
 

@@ -16,6 +16,10 @@
     <%= f.text_field :arv_number %>
   </div>
   <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
     <%= f.label :gender %>
     <%= f.select(:gender, options_for_select(['Male', 'Female'])) %>
   </div>
