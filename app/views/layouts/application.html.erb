@@ -36,6 +36,16 @@
 <%= javascript_include_tag 'perfect-scrollbar.js' %>
 <%= javascript_include_tag 'application.js' %>
 </head>
+<script type="text/javascript">
+$(document).ready(function() {
+	//sales range report
+        $('#appointmentDate').hide();
+
+	$('#appbydate').click(function(){
+        	$('#appointmentDate').show();		
+	});
+});
+</script>
 <style>
 /*#right-panel a{color:#145b80;}*/
 #main_content{overflow:hidden;height:550px;}
@@ -69,7 +79,15 @@ form input[type="text"]{width:300;}
 form input[type="password"]{width:300;}
 </style>
 <body>
-
+<div id="appointmentDate" style="position:absolute;z-index:10000;width:100%;height:720px;background-color: rgba(10, 10, 10, 0.5);">
+<form action="/appointments" method="get" style="position:absolute;top:200px;left:500px;width:150px;background:#fff;padding:30px;">
+<label style="color:#000;font-weight:strong;width:150px;text-align:center;">Start Date</label><br />
+<input type="date" id="start_date" name="start_date" /><br />
+<label style="color:#000;font-weight:strong;width:150px;text-align:center;">End Date</label><br />
+<input type="date" id="end_date" name="end_date" /><br /> 
+<input type="submit" value="proceed" id="submit" style="width:150.5px;margin-top:1px;" />
+</form>
+</div>
 <div id="main_menu">
 <div class="cssMenu">
 <ul>
@@ -83,7 +101,7 @@ form input[type="password"]{width:300;}
 	</li> 
     <li><a href="#">Appointments</a>
 	<ul>
-	    <li><a href="#">view by date</a></li>
+	    <li><a href="#" id="appbydate">view by date</a></li>
 	    <li><a href="/appointments">view all</a></li>
 	</ul>
     </li>

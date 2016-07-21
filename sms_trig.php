@@ -12,12 +12,12 @@ while ($s=mysqli_fetch_array($r)){
 	
 	
 	//for daily sms reminders change value of $message_daily variable
-	$message_daily = 'Mukukumbitsidwa kuti musayiwale kamwedwe mwadongosolo loyenelera musanagone. Paja ndi limodzi kamodzi.';
+	//$message_daily = 'Mukukumbitsidwa kuti musayiwale kamwedwe ka mankhwala leroli musanagone. Komanso mukumbukile ndondomeko yakamwedwe.';
 	
         
  
-	$sms_api_result = sendSMS($current_number, $message_daily);
-	print_r($sms_api_result); 
+	//$sms_api_result = sendSMS($current_number, $message_daily);
+	//print_r($sms_api_result); 
 	
 	$appoint = "SELECT `due_date`, `duration`, (DATEDIFF(due_date, now())) days_now FROM appointments WHERE `client_id` = '$current_id' AND DATEDIFF(due_date, now()) >= 4  ORDER BY `created_at` DESC LIMIT 1 ";
 	$query=mysqli_query($edi,$appoint);
@@ -31,7 +31,7 @@ while ($s=mysqli_fetch_array($r)){
 		
 	
 		//for appointment sms reminders change value of $message_appointment variable
-		$message_appointment = "Mukumbukire kuti mukuyenera kubweranso lachisanu pa ".$due_date;
+		$message_appointment = "Mukumbukire kuti mukuyenera kubweranso ku chipatala lachisanu pa ".$due_date;
 		
 		
 		$sms_api_result = sendSMS($current_number, $message_appointment);

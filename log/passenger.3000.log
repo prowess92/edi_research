@@ -4825,3 +4825,25 @@ App 7009 stdout:
 [ 2016-07-20 13:37:06.7354 6972/7fcf09817700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 7009, listening on unix:/tmp/passenger.1.0.6968/generation-0/backends/preloader.7009
 App 7058 stdout: 
 App 7067 stdout: 
+[ 2016-07-20 14:43:12.6485 11569/7f2115f77740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5hZnprN28vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.afzk7o/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '11568', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-07-20 14:43:12.6550 11572/7f2cb61a2740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.11568/generation-0/request
+[ 2016-07-20 14:43:13.0712 11578/7f69202b9740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.11568/generation-0/logging
+[ 2016-07-20 14:43:13.0714 11569/7f2115f77740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 11611 stdout: 
+[ 2016-07-20 14:43:35.1729 11572/7f2cb609b700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 11611, listening on unix:/tmp/passenger.1.0.11568/generation-0/backends/preloader.11611
+App 11639 stdout: 
+App 11648 stdout: 
+App 11658 stdout: 
+[ 2016-07-21 10:12:54.8244 6059/7f8af5393740 agents/Watchdog/Main.cpp:538 ]: Options: { 'analytics_log_user' => 'mwai', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5xeDdpODAvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'mwai', 'default_python' => 'python', 'default_ruby' => '/home/mwai/.rvm/gems/ruby-1.9.3-p551/wrappers/ruby', 'default_user' => 'mwai', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.qx7i80/locations.ini', 'passenger_version' => '4.0.46', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.46', 'web_server_pid' => '6058', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2016-07-21 10:12:54.9019 6062/7f54e350f740 agents/HelperAgent/Main.cpp:649 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6058/generation-0/request
+[ 2016-07-21 10:12:55.7282 6069/7f87adaad740 agents/LoggingAgent/Main.cpp:321 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6058/generation-0/logging
+[ 2016-07-21 10:12:55.7285 6059/7f8af5393740 agents/Watchdog/Main.cpp:728 ]: All Phusion Passenger agents started!
+App 6099 stdout: 
+[ 2016-07-21 10:13:21.0075 6062/7f54e3408700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 6099, listening on unix:/tmp/passenger.1.0.6058/generation-0/backends/preloader.6099
+App 6121 stdout: 
+App 7657 stdout: 
+[ 2016-07-21 10:51:31.9659 6062/7f54e3449700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 7657, listening on unix:/tmp/passenger.1.0.6058/generation-0/backends/preloader.7657
+App 7711 stdout: 
+App 8320 stdout: 
+[ 2016-07-21 11:07:36.3875 6062/7f54e3408700 Pool2/SmartSpawner.h:298 ]: Preloader for /var/www/edi_research started on PID 8320, listening on unix:/tmp/passenger.1.0.6058/generation-0/backends/preloader.8320
+App 8343 stdout: 

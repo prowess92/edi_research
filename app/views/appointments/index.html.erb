@@ -4,7 +4,7 @@ table tr td{width:350px;}
 table tr th a{text-decoration:none;color:#000;}
 </style>
 <h1>Listing appointments</h1>
-<table style="width:1000px">
+<table style="width:99%">
   <tr style="background:#fff">
     <th>ARV Number</th>
     <th><a id="by_duedate" href="?by_duedate=true" 
@@ -17,21 +17,39 @@ table tr th a{text-decoration:none;color:#000;}
 %>
   <tr>
     <% client = Client.find(appointment.client_id) %>
-    <td><%= client.arv_number %></td>
+    <td style="padding-left:10px;"><%= client.arv_number %></td>
     <td><%= appointment.due_date.to_date.to_s(:long) %></td>
     <td><%= appointment.created_by %></td>
   </tr>
+    <tr style="background:#fff;"><td style="background:#fff;" colspan="3">&nbsp;</td></tr>
 <% 
+  end
+  elsif !params[:start_date].nil? and !params[:end_date].nil?
+  
+  start_date = params[:start_date]
+  end_date = params[:end_date]
+
+  Appointment.find_by_sql(["SELECT * FROM `edi`.`appointments` WHERE DATE(due_date) BETWEEN DATE(?) AND DATE(?)",start_date, end_date]).each do |appointment|
+%>
+  <tr>
+    <% client = Client.find(appointment.client_id) %>
+    <td style="padding-left:10px;"><%= client.arv_number %></td>
+    <td><%= appointment.due_date.to_date.to_s(:long) %></td>
+    <td><%= appointment.created_by %></td>
+  </tr>
+  <tr style="background:#fff;"><td style="background:#fff;" colspan="3">&nbsp;</td></tr>
+<%
   end
   else 
 %>
 <% @appointments.each do |appointment| %>
   <tr>
     <% client = Client.find(appointment.client_id) %>
-    <td><%= client.arv_number %></td>
+    <td style="padding-left:10px;"><%= client.arv_number %></td>
     <td><%= appointment.due_date.to_date.to_s(:long) %></td>
     <td><%= appointment.created_by %></td>
   </tr>
+  <tr style="background:#fff;"><td style="background:#fff;" colspan="3">&nbsp;</td></tr>
 <% end %>
 <% end %>
 </table>
