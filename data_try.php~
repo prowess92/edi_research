@@ -1,0 +1,95 @@
+<?php
+ini_set('display_errors', 1);
+
+//insert patient IDs to $patient_ids variable
+
+echo "ARV Number\t";
+echo "| Phone\t\t";
+echo "| Duration\t\t";
+echo "\n";
+//database connection 
+$connect = mysqli_connect('172.25.9.131', 'root', 'root', 'openmrs');
+ 
+$q="SELECT DISTINCT
+(SELECT identifier FROM patient_identifier a WHERE a.patient_id = d.person_id 
+AND a.identifier_type = 4 AND  a.voided = 0  LIMIT 1) arv_number, 
+(SELECT identifier FROM patient_identifier b WHERE b.patient_id = d.person_id 
+AND b.identifier_type = 3 AND  b.voided = 0  LIMIT 1) patient_identifier,
+d.birthdate,
+d.gender,
+(SELECT value FROM person_attribute c WHERE c.person_id = d.person_id  
+AND c.person_attribute_type_id = 13 AND  c.voided = 0  LIMIT 1) occupation,
+(SELECT value FROM person_attribute c WHERE c.person_id = d.person_id  
+AND c.person_attribute_type_id = 12 AND  c.voided = 0  LIMIT 1) cellphone_number,
+(SELECT date_enrolled FROM patient_program e WHERE e.patient_id = d.person_id AND 
+e.program_id = 1 AND e.voided = 0 LIMIT 1) enrollment_date,
+(SELECT instructions FROM orders g WHERE g.patient_id = d.person_id AND
+ g.voided = 0 ORDER BY g.date_created DESC LIMIT 1) drug_taken,
+ (SELECT DATEDIFF(h.auto_expire_date,h.start_date) FROM orders h WHERE h.patient_id = d.person_id AND
+ h.voided = 0 ORDER BY h.date_created DESC LIMIT 1) duration,
+ (SELECT DATE(i.auto_expire_date) FROM orders i WHERE i.patient_id = d.person_id AND
+ i.voided = 0 ORDER BY i.date_created DESC LIMIT 1) next_appointment
+FROM person d INNER JOIN patient_program j ON  d.person_id = j.patient_id  
+WHERE d.person_id IN 
+
+
+
+
+(26810,40826,101456,121180,146279,162512,200028,200771,206502,219749,232186,250482,254526,263502,273404,285561,286903,306383,307543,324184,334967,335492,345548,356161,374063,380495,392698,402136,404986,405605,406598,416635,427665,432693,448513,475963,477939,485497,493237,494447,507726,507983,511584,515036,516977,520888,521712,525905,527923,528161,529623,529742,535696,538433,539491,539887,540239,541495,541995,542273,542559,542570,543036,543117,543130,543151,543154,543255,543662,543742,543744,543760,543831,543854,543929,544252,544284,544507,544516,544529,544531,544610,544618,544653,544674,544865,544873,544881,544897,544901,544913,545269,545392,545526,545701,545712,545716,545726,546014,546130,546502,546517,546638,546729,546731,546736,546764,546951,546976,547137,547172,547354,547374,547413,547434,547436,547698,547843,547848,547986,548046,548151,548324,548475,548491,548536,548704,548761,548767,548805,548858,548908,549058,549067,549099,549320,549324,549390,549675,549685,549711,549721,549735,549773,549925,549961,550186,550191,550195,550198,550391,550392,550400,550623,550748,550765,550869,551107,551110,551111,551115,551187,551195,551199,551266,551299,551300,551319,551323,551324,551351,551422,551541,551546,551548,551552,551856,551865,551869,551871,551878,551882,551884,552340,552436,552703,552947,553172,553383,553432,553436,553492,553498,553525,553527,553655,554045,554054,554058,554060,554067,554074,554528,554687,554831,554951,555076,555111,555187,555193,555488,555670,555777,555851,556016,556368,556370,556395,556402,556408,556432,556734,556935,557168,557330)
+
+
+
+
+
+AND DATE(j.date_enrolled) >= DATE('2016-04-01')
+AND DATEDIFF(now(),d.birthdate)/365 > 18";
+$r=mysqli_query($connect,$q);
+
+$edi = new mysqli('localhost', 'root', 'root', 'edi');
+
+while ($s=mysqli_fetch_array($r)){
+	$arv_number = $s['arv_number'];
+	$patient_identifier = $s['patient_identifier'];
+	$dob = $s['birthdate'];
+	$gender = $s['gender'];
+
+	if ($gender=='M'){
+		$gender='Male';	
+	}elseif ($gender=='F'){
+		$gender='Female';
+	}
+
+	$occupation = $s['occupation'];
+	$phone = $s['cellphone_number'];
+	$enrollment_date = $s['enrollment_date'];
+	$drug_taken = $s['drug_taken'];
+	$duration = $s['duration'];
+	$next_appointment = $s['next_appointment']; 
+
+	if (is_numeric($phone)){
+		if($phone != 'Unknown' && $phone != 'N/A' && $phone != 'none' && $phone != 'NULL' && $phone != 'null' && $phone != ' '){
+			$new_client  = "INSERT INTO clients (arv_number,patient_identifier,dob,gender,occupation,phone,created_at,updated_at) VALUES ('$arv_number','$patient_identifier','$dob','$gender','$occupation','$phone', now(), now())";
+        
+			$edi->query($new_client);        
+
+			$new_client_id = $edi->insert_id;  
+
+			$client_medicals =  "INSERT INTO client_medicals (client_id,regimen,enrollment_date,created_at,updated_at) VALUES ('$new_client_id','$drug_taken','$enrollment_date', now(), now())";
+
+			$edi->query($client_medicals);        
+
+			$appointments =  "INSERT INTO appointments	(client_id,due_date,duration,created_by,created_at,updated_at) VALUES ('$new_client_id',DATE('$next_appointment'), '$duration', 'Edith Kumwenda', now(), now())";
+
+			$edi->query($appointments); 
+
+			$new_appointment_id = $edi->insert_id;        
+
+
+			echo $arv_number."\t";
+			echo "| ".$phone."\t";
+			echo "| ".$duration."\t";
+			echo "\n";
+		}
+	}
+}
+?>

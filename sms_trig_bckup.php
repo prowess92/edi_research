@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors', 1);
 //php script for sending sms reminders to all patients (including appointment reminders)  
 include 'sms_api.php'; 
 
@@ -20,11 +19,11 @@ while ($s=mysqli_fetch_array($r)){
 	//$sms_api_result = sendSMS($current_number, $message_daily);
 	//print_r($sms_api_result); 
 	
-	$appoint = "SELECT `due_date`, `duration`, (DATEDIFF(due_date, now())) days_now FROM appointments WHERE `client_id` = '$current_id'  ORDER BY `created_at` DESC LIMIT 1 ";
+	$appoint = "SELECT `due_date`, `duration`, (DATEDIFF(due_date, now())) days_now FROM appointments WHERE `client_id` = '$current_id' AND DATEDIFF(due_date, now()) >= 4  ORDER BY `created_at` DESC LIMIT 1 ";
 	$query=mysqli_query($edi,$appoint);
 	$next_appoint= mysqli_fetch_array($query);
 	
-	if ($next_appoint['days_now']>'0' && $next_appoint['days_now']<='4'){
+	if ($next_appoint['days_now']>'0' && $next_appoint['days_now']=='4'){
 
 		$due_date = $next_appoint['due_date'];
 		$due_date = new DateTime($due_date);
@@ -32,11 +31,11 @@ while ($s=mysqli_fetch_array($r)){
 		
 	
 		//for appointment sms reminders change value of $message_appointment variable
-		$message_appointment = "Mukumbukire kuti mukuyenera kubweranso ku chipatala pa ".$due_date;		
+		$message_appointment = "Mukumbukire kuti mukuyenera kubweranso ku chipatala lachisanu pa ".$due_date;
+		
 		
 		$sms_api_result = sendSMS($current_number, $message_appointment);
-		echo $current_number."\n";
-                 print_r($sms_api_result); 
+		print_r($sms_api_result); 
 	}
 } 
 ?>
