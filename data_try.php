@@ -27,7 +27,7 @@ e.program_id = 1 AND e.voided = 0 LIMIT 1) enrollment_date,
  g.voided = 0 ORDER BY g.date_created DESC LIMIT 1) drug_taken,
  (SELECT DATEDIFF(h.auto_expire_date,h.start_date) FROM orders h WHERE h.patient_id = d.person_id AND
  h.voided = 0 ORDER BY h.date_created DESC LIMIT 1) duration,
- (SELECT DATE(i.auto_expire_date) FROM orders i WHERE i.patient_id = d.person_id AND
+ (SELECT DATE(i.value_datetime) FROM obs i WHERE i.person_id = d.person_id AND
  i.voided = 0 ORDER BY i.date_created DESC LIMIT 1) next_appointment
 FROM person d INNER JOIN patient_program j ON  d.person_id = j.patient_id  
 WHERE d.person_id IN 
