@@ -12,9 +12,6 @@ echo "\n";
 $connect = mysqli_connect('172.25.9.131', 'root', 'root', 'openmrs');
 $edi = mysqli_connect('localhost', 'root', 'root', 'edi');
 
-/*$del_app = "DELETE FROM `appointments`";
-mysqli_query($edi,$del_app);*/
-
 $patient_identifier = "SELECT id, patient_identifier FROM clients";
 $query = mysqli_query($edi,$patient_identifier);
 while($z=mysqli_fetch_array($query)){
