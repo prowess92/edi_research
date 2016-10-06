@@ -3,7 +3,7 @@
 include 'sms_api.php'; 
 
 
-	$number = array('0888618783', '0999551259', '0882199741', '0885098567', '0999316299', '0996040801', '0999417696', '0996234931', '0999272610', '0994498533', '0888988818', '0883440284', '0996901280', '0999758400');        
+	$number = array('0888722434');        
 	
 	$count = count($number);
 	 
@@ -13,9 +13,9 @@ include 'sms_api.php';
 
 	$current_number = $number[$i]; 
 	//for daily sms reminders change value of $message_effect1 and $message_effect2 variable
-	$message_effect1 = "Mukumbukire kuti zizindikiro za makhwala zowopsya ndi:- Chikasu m'maso, Zilonda pa khungu ndi dzanzi m'manja ndi m'miyendo";
+	//$message_effect1 = "Mukumbukire kuti zizindikiro zosonyeza kuti mwadana ndi makhwala, ndi chikasu m'maso, zilonda pa khungu ndi dzanzi m'manja ndi mmiyendo";
 
-	$message_effect2 = "Mukumbukire kuti zizindikiro za makhwala zosaopsya ndi:- Chizungulire, Maloto a chilendo ndi Nselu, ndipo zimasiya zokha";
+	$message_effect2 = "Mukumbukire kuti zizindikiro za makhwala zosaopsya ndi:- Chizungulire, Maloto a chilendo ndi Nselu, ndipo zimenezi zimasiya zokha";
        
 	$sms_api_result = sendSMS($current_number, $message_effect1);
 	print_r($sms_api_result);

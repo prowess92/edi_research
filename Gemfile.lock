@@ -156,6 +156,3 @@ DEPENDENCIES
   treetop (= 1.4.15)
   tzinfo (= 0.3.39)
   uglifier (>= 1.0.3)
-
-BUNDLED WITH
-   1.11.2
