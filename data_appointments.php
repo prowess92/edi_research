@@ -46,14 +46,18 @@ while($z=mysqli_fetch_array($query)){
 
 				$edi->query($appointments); 
 
+				$next_app_human  = new DateTime($next_appointment);
+				$next_app_human  = $next_app_human ->format('d F, Y');
 				echo $patient_identifier."\t\t\t";
-				echo "| ".$next_appointment;
+				echo "| ".$next_app_human;
 				echo "\n";
 
 			}else{
+				$next_app_human  = new DateTime($next_appointment);
+				$next_app_human  = $next_app_human ->format('d F, Y');
 				echo $patient_identifier."\t\t\t";
-				echo "| ".$next_appointment;
-				echo "|\033[31m flagged as duplicate not migrated \033[0m";
+				echo "| ".$next_app_human;
+				echo "  ~> \033[31m flagged as duplicate not migrated \033[0m";
 				echo "\n";
 			}
 		}
