@@ -32,17 +32,30 @@ while($z=mysqli_fetch_array($query)){
 
 		while ($s=mysqli_fetch_array($r)){
 			
-	
-			$next_appointment = $s['value_datetime']; 
+			$next_appointment = $s['value_datetime'];
 
-			$appointments =  "INSERT INTO appointments (client_id,due_date,created_by,created_at,updated_at) VALUES 
-			('$client_id',DATE('$next_appointment'), 'Edith Kumwenda', now(), now())";
+			$appointment_checker = "SELECT `due_date` AS counter FROM appointments WHERE DATE(`due_date`) = DATE('$next_appointment') AND `client_id` = '$client_id'";
+			
+			$app_check = mysqli_query( $edi,$appointment_checker);
+			$app_count = mysqli_num_rows($app_check);
+			
+			//echo  "app count is: ".$app_count; 
+			if($app_count == 0){
+				$appointments =  "INSERT INTO appointments (client_id,due_date,created_by,created_at,updated_at) VALUES 
+				('$client_id',DATE('$next_appointment'), 'Edith Kumwenda', now(), now())";
 
-			$edi->query($appointments); 
+				$edi->query($appointments); 
 
-			echo $patient_identifier."\t";
-			echo "| ".$next_appointment;
-			echo "\n";
+				echo $patient_identifier."\t\t\t";
+				echo "| ".$next_appointment;
+				echo "\n";
+
+			}else{
+				echo $patient_identifier."\t\t\t";
+				echo "| ".$next_appointment;
+				echo "|\033[31m flagged as duplicate not migrated \033[0m";
+				echo "\n";
+			}
 		}
 	}
 }
